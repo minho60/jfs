@@ -1,0 +1,27 @@
+메모장 대신 사용
+
+1. vscode 제거
+2. vscode 설치
+3. 확장프로그램 
+    - 한국어 패치팩: (검색어 kr) 선택
+    - live server: (검색어 Live) 필수
+    - 테마: one dark pro (검색어 thema one) 선택
+    - power mode (검색어: power) 선택
+    - vs code icon 선택 (추천) 나중엔 vscode pdf 설치 요망
+        -> 기본값은 seti / vscode icon 으로 바꿈
+    
+
+
+ 내컴퓨터 > 로컬디스크D: > 이름폴더
+          서버(servser)컴퓨터 > github(깃허브) >jfs폴더
+
+    클라이언트(client) 컴퓨터
+    서버 (servser) 컴퓨터 -> github(깃허브) 필수
+
+    git(깃) 
+               -> 자료를 업로드/ 다운로드
+    
+    github(깃허브): 저장소(레퍼지토리)
+    https://github.com/
+               -> 파일/폴더 저장공간 확보
+
