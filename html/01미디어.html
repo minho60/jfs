@@ -6,8 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-   
-   
+   <!-- 
+    Html(Hyper text Markup Language)
+        -웹 사이트에내용 표시
+    
+    형식: <시작태그> 내용 </끝태그>
+          <시작태그 속성="">내용 </끝태그>   
+
+        속성    
+                - 필수 속성
+                    예) a 태그의 href
+                    예) img 태그의 src, alt
+                - 선택 속성
+                    예) img 태그의 width    
+    
+          -->
+    
+    
+    
     <!--!탭: emmet 기능 -->
     <!--https://docs.emmet.io/cheat-sheet/  -->
     <!-- html 요소 (element)
@@ -17,16 +33,63 @@
 
      <!-- 시작태그, contents, 끝태그 -->
     <!-- 빈태그: 종료(끝) 태그가 없는 태그도 있다. -->
-
-
+    <!--주석:  쉬프트+ 알트+ a -->
+    <!--정돈(들여쓰기): 쉬프트+ 알트+ f  -->
+    <!-- h1+p+a+img 탭 -->
+   <h1>제목</h1>
    <h1>제목</h1>
    <p>본문 텍스트 입니다.</p>
+   <p>본문 텍스트 입니다.</p>
    <a href= "https://github.com/minho60/jfs">마이 깃허브 사이트</a>
-   <img src="logo.png " alt="대체 텍스트 ">
+   <!--하이퍼링크
+        - 웹 페이지나 문서 내에서 다른 페이지, 문서, 이미지, 파일, 또는 웹 주소 등으로 연결을 제공하는 요소 
+        - 다른ㅇ문서나 정보로 즉시 연결되는 참조 링크 -->
+   
+   
+   <img src="logo.png " alt="대체 텍스트 " width="100">
    <img src="logo.svg " alt="대체 텍스트 ">
    <!--복제: 쉬프트+ 알트+아래/위 방향키-->   
-
    
-  
+   <!-- ul>li*5 --> 
+   <!-- 순서없는 목록 --> 
+   <ul>
+        <li>카페라떼 </li>  
+        <li>아메리카노</li>        
+        <li>바닐라라떼</li>
+        <li>카푸치노</li>
+        <li>바나니노</li>
+        
+    </ul>
+<!-- 순서 있는 목록 -->
+<!-- ol>li*3 -->
+ <h2>올림픽 양궁 순위</h2> 
+<ol>
+    <li>한국</li>
+    <li>미국</li>
+    <li>양궁</li>
+   </ol> 
+<img src="https://img.khan.co.kr/news/2022/08/04/news-p.v1.20220804.af375d8f600a48a2baca7cf89c513a03_P1.jpg" alt="sns아이콘" width="100">
+
+<!-- 인라인 스타일  -->
+<img src="https://img.khan.co.kr/news/2022/08/04/news-p.v1.20220804.af375d8f600a48a2baca7cf89c513a03_P1.jpg" alt="sns아이콘" style="width:100px;"> <!-- 스타일 뒤 코드는css 아래 방법이 더 좋은 방법 -->
+<!-- 웹표준
+     웹접근성:모든 사람이 동등하게 웹을 사용(장애인,어르신) 
+
+     -웹 표준 준수 방법
+        1.HTML, css, js
+     
+        유효성 검사
+     검사 사이트: https://validator.w3.org/
+     
+     적응형 vs 반응형
+     -적응형웹      
+          -미리 정의된 여러 고정 레이아웃 중 하나를 선택하여 보여주는 웹 방식          
+          -> 예) 네이버, 메가박스
+     -반응형웹 -> 예) 메가커피,
+     -->
+ 
+
+
+
 </body>
 </html>
