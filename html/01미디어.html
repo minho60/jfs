@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-   <!-- 
+
+<body style="margin:0;">
+    <!-- 
     Html(Hyper text Markup Language)
         -웹 사이트에내용 표시
     
@@ -18,12 +20,20 @@
                     예) a 태그의 href
                     예) img 태그의 src, alt
                 - 선택 속성
-                    예) img 태그의 width    
-    
-          -->
-    
-    
-    
+                    예) img 태그의 width 
+                    예) video 태그의 width, controls
+                -글로벌 속성 -> 모든 태그에 사용
+                    예) style       
+            태그에 따라 필수 속성이 있을 수도 있고, 없을 수도 있다.
+            속성이 여러개일 경우 한칸 이상의 공백으로 구분(관례상 한 칸만 띄움)         
+             
+        css(Cascading Style Sheet)
+            -> 디자인: 색상, 크기, 테두리, 배치(layout) 등    
+            
+            
+            -->
+
+                    
     <!--!탭: emmet 기능 -->
     <!--https://docs.emmet.io/cheat-sheet/  -->
     <!-- html 요소 (element)
@@ -31,48 +41,50 @@
     2. 인라인(inline) 요소: a, img
      -->
 
-     <!-- 시작태그, contents, 끝태그 -->
+    <!-- 시작태그, contents, 끝태그 -->
     <!-- 빈태그: 종료(끝) 태그가 없는 태그도 있다. -->
     <!--주석:  쉬프트+ 알트+ a -->
     <!--정돈(들여쓰기): 쉬프트+ 알트+ f  -->
     <!-- h1+p+a+img 탭 -->
-   <h1>제목</h1>
-   <h1>제목</h1>
-   <p>본문 텍스트 입니다.</p>
-   <p>본문 텍스트 입니다.</p>
-   <a href= "https://github.com/minho60/jfs">마이 깃허브 사이트</a>
-   <!--하이퍼링크
+    <h1 style="background:yellow;">제목</h1>
+    <h1>제목</h1>
+    <p style="border: spx solid red;">본문 텍스트 입니다.</p>
+    <p style="text-decoration: none; color:blue; font-size:32px;">본문 텍스트 입니다.</p>
+    <a href="https://github.com/minho60/jfs">마이 깃허브 사이트</a>
+    <!--하이퍼링크
         - 웹 페이지나 문서 내에서 다른 페이지, 문서, 이미지, 파일, 또는 웹 주소 등으로 연결을 제공하는 요소 
         - 다른ㅇ문서나 정보로 즉시 연결되는 참조 링크 -->
-   
-   
-   <img src="logo.png " alt="대체 텍스트 " width="100">
-   <img src="logo.svg " alt="대체 텍스트 ">
-   <!--복제: 쉬프트+ 알트+아래/위 방향키-->   
-   
-   <!-- ul>li*5 --> 
-   <!-- 순서없는 목록 --> 
-   <ul>
-        <li>카페라떼 </li>  
-        <li>아메리카노</li>        
-        <li>바닐라라떼</li>
-        <li>카푸치노</li>
-        <li>바나니노</li>
-        
-    </ul>
-<!-- 순서 있는 목록 -->
-<!-- ol>li*3 -->
- <h2>올림픽 양궁 순위</h2> 
-<ol>
-    <li>한국</li>
-    <li>미국</li>
-    <li>양궁</li>
-   </ol> 
-<img src="https://img.khan.co.kr/news/2022/08/04/news-p.v1.20220804.af375d8f600a48a2baca7cf89c513a03_P1.jpg" alt="sns아이콘" width="100">
 
-<!-- 인라인 스타일  -->
-<img src="https://img.khan.co.kr/news/2022/08/04/news-p.v1.20220804.af375d8f600a48a2baca7cf89c513a03_P1.jpg" alt="sns아이콘" style="width:100px;"> <!-- 스타일 뒤 코드는css 아래 방법이 더 좋은 방법 -->
-<!-- 웹표준
+
+    <img src="logo.png " alt="대체 텍스트 " width="100">
+    <img src="logo.svg " alt="대체 텍스트 " style="border: 1px solid gray; transform:rotate(45deg);">
+    <!--복제: 쉬프트+ 알트+아래/위 방향키-->
+
+    <!-- ul>li*5 -->
+    <!-- 순서없는 목록 -->
+    <ul style="list-style:none;">
+        <li>카페라떼 </li>
+        <li>아메리카노</li>
+        <li style="font-style:italic;">바닐라라떼</li>
+        <li style="font-weight:700;">카푸치노</li>
+        <li>바나니노</li>
+
+    </ul>
+    <!-- 순서 있는 목록 -->
+    <!-- ol>li*3 -->
+    <h2 style="border-bottom: 3px solid red;">올림픽 양궁 순위</h2>
+    <ol style="line-height: 2;">
+        <li>한국</li>
+        <li>미국</li>
+        <li>양궁</li>
+    </ol>
+    <img src="https://img.khan.co.kr/news/2022/08/04/news-p.v1.20220804.af375d8f600a48a2baca7cf89c513a03_P1.jpg"
+        alt="sns아이콘" width="100">
+
+    <!-- 인라인 스타일  -->
+    <img src="https://img.khan.co.kr/news/2022/08/04/news-p.v1.20220804.af375d8f600a48a2baca7cf89c513a03_P1.jpg"
+        alt="sns아이콘" style="width:100px;"> <!-- 스타일 뒤 코드는css 아래 방법이 더 좋은 방법 -->
+    <!-- 웹표준
      웹접근성:모든 사람이 동등하게 웹을 사용(장애인,어르신) 
 
      -웹 표준 준수 방법
@@ -87,9 +99,40 @@
           -> 예) 네이버, 메가박스
      -반응형웹 -> 예) 메가커피,
      -->
- 
 
+    <!-- 유튜브 링크 걸기 -->
+    <!-- width: 1430px; height: 615px; -->
+    <iframe width="1431" height="615" src="https://www.youtube.com/embed/-4vv5mT5Tkw"
+        title="Hyundai Genesis Time to HTRAC commercial 현대자동차 제네시스 광고" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 200px; height: 150px;"></iframe>
+    <iframe width="1431" height="615" src="https://www.youtube.com/embed/-4vv5mT5Tkw"
+        title="Hyundai Genesis Time to HTRAC commercial 현대자동차 제네시스 광고" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 200px; height: 150px;"></iframe>
+
+        <!-- html요소는 부모/ 자식 관계가 있다. -->
+         <!-- img 파일 형식: jpg, png, svg 등 -->
+          <!-- video 파일 형식: mp4,webm 등  -->
+           <!-- 온라인 확장자 변환 프로그램
+            예) mp4-> webm
+            -> https://convertio.co/kr/video-converter/ -->
+    <video width="400" height="300" controls>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.ogg" type="video/ogg">
+        <!--<source src="movie.webm" type="video/webm">-->
+        Your browser does not support the video tag.
+    </video>
+
+
+    <!-- 빈요소: <img>, <br>, <hr> -->
+<hr style="border: 10px solid red;">
+<!-- 단위: px(픽셀), % , vh, vw,.. -->
+ <!-- 자동 플레이: autoplay + muted -->
+  <!-- 무한반복: loop-->
+<video src="main_video1.mp4" width="100%" autoplay muted loop style="width:100%; height:100vh; object-fit: cover;"></video>
 
 
 </body>
+
 </html>
