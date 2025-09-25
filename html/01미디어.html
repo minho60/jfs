@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 
+<!-- 텍스트 영역 -->
+
 <body style="margin:0;">
     <!-- 
     Html(Hyper text Markup Language)
@@ -33,7 +35,7 @@
             
             -->
 
-                    
+
     <!--!탭: emmet 기능 -->
     <!--https://docs.emmet.io/cheat-sheet/  -->
     <!-- html 요소 (element)
@@ -55,11 +57,6 @@
         - 웹 페이지나 문서 내에서 다른 페이지, 문서, 이미지, 파일, 또는 웹 주소 등으로 연결을 제공하는 요소 
         - 다른ㅇ문서나 정보로 즉시 연결되는 참조 링크 -->
 
-
-    <img src="logo.png " alt="대체 텍스트 " width="100">
-    <img src="logo.svg " alt="대체 텍스트 " style="border: 1px solid gray; transform:rotate(45deg);">
-    <!--복제: 쉬프트+ 알트+아래/위 방향키-->
-
     <!-- ul>li*5 -->
     <!-- 순서없는 목록 -->
     <ul style="list-style:none;">
@@ -78,13 +75,8 @@
         <li>미국</li>
         <li>양궁</li>
     </ol>
-    <img src="https://img.khan.co.kr/news/2022/08/04/news-p.v1.20220804.af375d8f600a48a2baca7cf89c513a03_P1.jpg"
-        alt="sns아이콘" width="100">
 
-    <!-- 인라인 스타일  -->
-    <img src="https://img.khan.co.kr/news/2022/08/04/news-p.v1.20220804.af375d8f600a48a2baca7cf89c513a03_P1.jpg"
-        alt="sns아이콘" style="width:100px;"> <!-- 스타일 뒤 코드는css 아래 방법이 더 좋은 방법 -->
-    <!-- 웹표준
+ <!-- 웹표준
      웹접근성:모든 사람이 동등하게 웹을 사용(장애인,어르신) 
 
      -웹 표준 준수 방법
@@ -100,6 +92,35 @@
      -반응형웹 -> 예) 메가커피,
      -->
 
+
+    <!-- ###########################이미지 영역############################ -->
+     <!-- 속성 값은 "" 안에 쓴다. -->
+      <!-- 
+            ./ 현재폴더 위치
+            ../ 현재폴더에서 한 단계 상위(부모) 폴더로 이동 
+                예) ../../../ 세번 탈출-->
+    <!-- 다중 선택: 컨트롤+D 
+            -> 선택한 같은 단어를 동시선택
+        다중 커서: 알트 + 클릭    -->            
+
+    <img src="./../assets/imgs/logo.svg" alt="대체 텍스트 " width="100">
+    <img src="./../assets/imgs/logo.svg" alt="대체 텍스트 " style="border: 1px solid gray; transform:rotate(45deg);">
+
+
+    <img src="https://img.khan.co.kr/news/2022/08/04/news-p.v1.20220804.af375d8f600a48a2baca7cf89c513a03_P1.jpg"
+        alt="sns아이콘" width="100">
+
+    <!-- 인라인 스타일  -->
+    <img src="https://img.khan.co.kr/news/2022/08/04/news-p.v1.20220804.af375d8f600a48a2baca7cf89c513a03_P1.jpg"
+        alt="sns아이콘" style="width:100px;"> <!-- 스타일 뒤 코드는css 아래 방법이 더 좋은 방법 -->
+    
+
+<!-- ######################################################################### -->
+
+
+<!-- ########################비디오 영역 ###########################-->
+
+
     <!-- 유튜브 링크 걸기 -->
     <!-- width: 1430px; height: 615px; -->
     <iframe width="1431" height="615" src="https://www.youtube.com/embed/-4vv5mT5Tkw"
@@ -109,29 +130,52 @@
     <iframe width="1431" height="615" src="https://www.youtube.com/embed/-4vv5mT5Tkw"
         title="Hyundai Genesis Time to HTRAC commercial 현대자동차 제네시스 광고" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 200px; height: 150px;"></iframe>
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 400px; height: 300px;"></iframe>
 
-        <!-- html요소는 부모/ 자식 관계가 있다. -->
-         <!-- img 파일 형식: jpg, png, svg 등 -->
-          <!-- video 파일 형식: mp4,webm 등  -->
-           <!-- 온라인 확장자 변환 프로그램
+    <!-- html요소는 부모/ 자식 관계가 있다. -->
+    <!-- img 파일 형식: jpg, png, svg 등 -->
+    <!-- video 파일 형식: mp4,webm 등  -->
+    <!-- 온라인 확장자 변환 프로그램
             예) mp4-> webm
-            -> https://convertio.co/kr/video-converter/ -->
-    <video width="400" height="300" controls>
-        <source src="video.mp4" type="video/mp4">
-        <source src="video.ogg" type="video/ogg">
+            -> https://convertio.co/kr/video-converter/
+            
+            https://caniuse.com/
+
+        controls: 비디오 플레이어
+        autoplay: 자동 실행
+        muted: 음소거
+        loop: 무한 반복
+        poster: 사용자가 동영상을 재생하거나 탐색하기 전까지 출력되는 포스터 이미지      
+            -->
+
+    <video controls poster="./../assets/imgs/mov_ddd.png" style="width:400px; height:300px;">
+        <source src="./../assets/vid/video.mp4" type="video/mp4">
+        <source src="./../assets/vid/video.mp4" type="video/ogg">
         <!--<source src="movie.webm" type="video/webm">-->
         Your browser does not support the video tag.
     </video>
 
 
     <!-- 빈요소: <img>, <br>, <hr> -->
-<hr style="border: 10px solid red;">
-<!-- 단위: px(픽셀), % , vh, vw,.. -->
- <!-- 자동 플레이: autoplay + muted -->
-  <!-- 무한반복: loop-->
-<video src="main_video1.mp4" width="100%" autoplay muted loop style="width:100%; height:100vh; object-fit: cover;"></video>
+    <hr style="border: 10px solid red;">
+    <!-- 단위: px(픽셀), % , vh, vw,.. -->
+    <!-- 자동 플레이: autoplay + muted -->
+    <!-- 무한반복: loop-->
+    <video src="../assets/vid/main_video1.mp4" width="100%" autoplay muted loop
+        style="width:100%; height:100vh; object-fit: cover;"></video>
 
+<!-- ############################################################### -->
+
+<!-- 오디오영역 -->
+
+
+    <audio controls>
+        <source src="../assets/aud/horse.ogv" type="audio/ogg">
+        <source src="../assets/aud/horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+ <audio src="../assets/aud/It's Definitely It - Freedom Trail Studio.mp3" autoplay loop></audio>
 
 </body>
 
