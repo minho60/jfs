@@ -1,23 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김민호</title>
 </head>
-<body>
+
+<body style="background-color:white">
     <!-- h1+p+nav>ul>li*2>a[href] 에밋기능-->
     <h1>개인사이트</h1>
     <p>김민호의 개인사이트 입니다.</p>
 
-<!-- nav>ul>li*2>a[href] -->
+    <!-- nav>ul>li*2>a[href] -->
 
-<nav>
-    <ul>
-        <li><a href="index.html">home</a></li>
-        <li><a href="sub.html">about me</a></li>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="sub.html">about me</a></li>
+    </nav>
+
+
+    <!-- ui카드 -->
+    <div style="
+    font-family: 'noto sanss kr', sans-serif; 
+    background-color: #f7f7f7; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    aligh-item: center; 
+    min-height:100vh; 
+    padding: 20px; 
+    width: 100%;
+    max-width: 360px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    border-left: 5px solid #9b59b6;
+    ">
+        <!-- id 또는 clss 글로벌 속성을 사용하여 같은 태그를 구분한다. -->
+        <!-- 상단이미지 -->
+        <div style="height: 250px;">
+            <img src="https://www.honorsville.co.kr/upload/temp/20255303432444.jpg" alt="충주연수 경남아너스빌 센터원"
+                style="width:100%; height:100%; object-fit: cover; display:block;">
+        </div>
+        <!-- 콘텐츠 -->
+        <div style="padding: 10px 20px 30px; ">
+            <div style="display: flex; justify-content: space-between; aligh-items: flex-start; margin-bottom: 5px;">
+                <span>분양중</span>
+                <button>하트</button>
+            </div>
+            <h3>충주연수 경남아너스빌 센터원</h3>
+        </div>
+        <div>
+            <p>충청북도 충주시 연수동 787-25 일원</p>
+            <p>234세대</p>
+        </div>
+        <div>1866-8243</div>
+    </div>
+
 
 
 </body>
+
 </html>
