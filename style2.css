@@ -4,7 +4,12 @@
 /* fontawesome.com */
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css); /* @i */
 
+/* 1. 웹(외부) 폰트를 CDN으로 연결 */
+/* 눈누 */
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
+/* 구글 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
 /* common */
 *{
@@ -14,6 +19,49 @@
 img{
     vertical-align: bottom;
 }
+
+/* 
+    typo/color system
+        -글꼴 나눔스퀘어
+        -줄간격 24px
+        -큰제목 22px, #3333
+        -배지 15px, #fff
+        -본문 15px, #9a8b86
+        -연락처 24px , #0f2244 -> Noto Sans Kr
+
+*/
+
+
+body{
+    /* 2. font-family 속성으로 지정 */
+    /* 글꼴은 하위 요소에 상속해준다. */
+   font-family: 'NanumSquare';
+   font-size: 15px;
+   line-height: 1.6;
+   color: #9a8b86;
+
+}
+
+.card-title{
+    font-size: 22px;
+    color: #333;
+    line-height: 27px;
+}
+
+.card-details p{
+  /* p는 위아래 기본 마진이 있다. 폰트크기의 1em */
+  margin:0;
+  
+}
+
+.phone-number{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color:#0f2244;
+
+}
+
 
 /* header */
 /* section */
