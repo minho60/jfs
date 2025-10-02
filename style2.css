@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CDN은 Content Delivery Network의 약자로, 전 세계에 분산된 여러 서버 네트워크를 통해 사용자에게 웹 콘텐츠(예: 웹 사이트, 이미지, 동영상)를 더 빠르게 전달하는 서비스입니다.  */
+/* https://cdnjs.com */
+/* fontawesome.com */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css); /* @i */
+
+
+
+/* common */
+*{
+    box-sizing: border-box; /* bx */
+}
+
+img{
+    vertical-align: bottom;
+}
+
+/* header */
+/* section */
+/* card-container */
+/* 배경색: bgc */
+.card-container {
+    background-color: #D8EAF4;
+    width: 340px;
+    /* overflow: hidden; */
+}
+
+.card-image-wrapper{
+    overflow: hidden;
+}
+
+.card-image-wrapper img{
+    transition:0.3s; /* trs, 0.3초 */
+}
+
+.card-image-wrapper:hover img{
+    transform: scale(1.2, 1.2); /* trf:s */
+    
+}
+
+.card-content{
+    /* 마진 겹침 해결 
+        -> 마진이 부모 바깥으로 지정 되는것을 방지
+    */
+     display: flow-root;
+}
+
+/* 배지+ 좋아요 */
+.card-header{
+    padding-left: 45;
+}
+
+
+
+/* 좋아요 하트 */
+.like-button{
+    /* 요소의 크기는 지정하면서 줄은 바뀌지 않는다. */
+    display: inline-block; /* dib */
+    width: 55px;    
+    height: 55px; 
+    /* padding: 17px 15px 23px; */
+    line-height:55px; /* 줄간격, lh55 */
+    text-align: center; /* 텍스트 좌우 정렬, tac */
+
+    background-color: #B1B4B3; /* bgc */
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 140px;
+}
+
+
+.like-button i {
+    color:white;
+    font-size: 20px;
+}
+
+.tag-badge {
+    display: inline-block;
+    width: 70px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    background-color: #0F2244;
+    color:white;
+    margin-left: 45px;
+}
+
+.card-header span{
+ vertical-align: top; /* vat */
+}
+
+/* 카드 UI 정보 */
+.card-body{
+    margin: 0 45px 120px;
+    
+}
+
+
+/* footer */
