@@ -65,11 +65,19 @@ body{
 
 /* header */
 /* section */
+#section {
+    display: flex;
+    justify-content: center; /* jcc */
+}
+
+
+
 /* card-container */
 /* 배경색: bgc */
 .card-container {
     background-color: #D8EAF4;
     width: 340px;
+    margin:20px;
     /* overflow: hidden; */
 }
 

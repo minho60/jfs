@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css 선택자</title>
+<style>
+    /* 
+    부모 자식 관계 선택자
+        부모선택자 자식선택자 -> 손자포함
+        부모선택자>자식선택자 -> 자식만
+    
+    
+    
+    
+    
+    
+    형제 관계 선택자 
+        형선택자~ 제선택자 -> 모든 동생
+        참고 ~(딜드, tilde)
+
+    인접형제 선택자
+        형선택자+ 제선택자 -> 바로 아래 동생만
+    
+    
+    */
+.red {color: red;}
+h1+p{color: red;}
+h1~p{border: 1px solid blue;}
+
+
+</style>
+
+</head>
+<body>
+    <div>
+        <h1>형제 관계 선택자</h1>
+        <h2>형제 선택자</h2>
+        <p>나는 1 번째 문단</p>
+        <p>나는 2 번째 문단</p>
+        <h2>인접형제 선택자</h2>
+        <p>나는 3 번째 문단</p>
+        <p>나는 4 번째 문단</p>
+        <p>나는 5 번째 문단</p>
+    </div>
+
+
+</body>
+</html>
