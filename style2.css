@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import url(common.css);
+@import url(typo.css);
 
 /* CDN은 Content Delivery Network의 약자로, 전 세계에 분산된 여러 서버 네트워크를 통해 사용자에게 웹 콘텐츠(예: 웹 사이트, 이미지, 동영상)를 더 빠르게 전달하는 서비스입니다.  */
 /* https://cdnjs.com */
