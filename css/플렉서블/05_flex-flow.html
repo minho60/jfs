@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css: flexbox</title>
+    <style>
+      /* 
+        flex-flow
+           flex-direction과 flex-wrap을 동시 표현
+           기본값은 row nowrap
+
+
+        flex-grow:1 -> 성장
+        flex-shrink:0 -> 수축
+        flex-basis:없음 -> 너비
+        
+        flex 속기 속성
+        flex: grow shrink basis;
+        display: flex;
+
+
+     */
+        /* 플렉스 컨테이너 */
+      .flex-container {
+        display: flex;
+        /* flex-directiond의 기본 값은 row */
+        /* flex-direction: column; */
+        background-color: dodgerblue;
+        /* width: 200px; */
+        height: 300px;
+        /* gap: 10px; */
+       
+      }
+
+      /* 플렉스 아이템 */
+      .flex-container div {
+        background-color: #f1f1f1;
+        width: 200px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      .fx1{
+        /*
+        flex-wrap: nowrap;일 경우
+        플렉스 아이템에 지정한 height(⭕) ,width(❌) */
+        flex-flow: row nowrap;
+        margin-bottom: 300px;
+      }
+
+      .fx2 {
+         /*
+         flex-wrap: nowrap;일 경우
+         플렉스 아이템에 지정한 height(❌) ,width(⭕) */
+       flex-flow: column nowrap;
+      }
+
+     
+    </style>
+  </head>
+
+  <body>
+    <div class="flex-container fx1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      
+    </div>
+
+    <div class="flex-container fx2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+
+   
+  </body>
+</html>

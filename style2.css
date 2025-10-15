@@ -1,4 +1,7 @@
 @charset "utf-8";
+
+@import url(common.css);
+
 /* CDN은 Content Delivery Network의 약자로, 전 세계에 분산된 여러 서버 네트워크를 통해 사용자에게 웹 콘텐츠(예: 웹 사이트, 이미지, 동영상)를 더 빠르게 전달하는 서비스입니다.  */
 /* https://cdnjs.com */
 /* fontawesome.com */
@@ -11,14 +14,7 @@
 /* 구글 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-/* common */
-*{
-    box-sizing: border-box; /* bx */
-}
 
-img{
-    vertical-align: bottom;
-}
 
 /* 
     typo/color system
@@ -63,11 +59,64 @@ body{
 }
 
 
+
+
 /* header */
 /* section */
-#section {
+/* section common(공통) */
+
+.sec{
+    /* vh: viewport hight */
+    height: 100vh;
+}
+
+
+/* section1 area */
+/* #sec1 *{
+    outline: 1px solid green;
+} */
+
+
+#sec1 .outer{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    height: 100%;
+}
+
+#sec1 .container{
+    /* 너비가 100%이지만 1330px은 넘지 않게 */
+    width: 100%; 
+    max-width: 1330px; /* maw1330 */
+    /* 인라인 요소(텍스트포함) 가로 정렬 */
+    text-align: center;
+
+}
+
+#sec1 .counter{
+    display: flex;
+   justify-content: center;
+   
+}
+
+#sec1 .counter div{
+    width: 307px;
+    /* height와 line-height가 같으면 텍스트가 수직 중앙에 배치된다. 단, 한 줄 텍스트일 때만 가능 */
+    height: 44px;
+    line-height: 44px;
+    background-color: rgba(255, 217,0, .6);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+
+
+/* section2 area */
+#sec2 {
     display: flex;
     justify-content: center; /* jcc */
+    align-items: center;
+    gap: 20px; /* g20 */
 }
 
 
@@ -77,7 +126,7 @@ body{
 .card-container {
     background-color: #D8EAF4;
     width: 340px;
-    margin:20px;
+    /* margin:20px; */
     /* overflow: hidden; */
 }
 
