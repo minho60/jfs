@@ -17,50 +17,6 @@
 
 
 
-/* 
-    typo/color system
-        -글꼴 나눔스퀘어
-        -줄간격 24px
-        -큰제목 22px, #3333
-        -배지 15px, #fff
-        -본문 15px, #9a8b86
-        -연락처 24px , #0f2244 -> Noto Sans Kr
-
-*/
-
-
-body{
-    /* 2. font-family 속성으로 지정 */
-    /* 글꼴은 하위 요소에 상속해준다. */
-   font-family: 'NanumSquare';
-   font-size: 15px;
-   line-height: 1.6;
-   color: #9a8b86;
-
-}
-
-.card-title{
-    font-size: 22px;
-    color: #333;
-    line-height: 27px;
-}
-
-.card-details p{
-  /* p는 위아래 기본 마진이 있다. 폰트크기의 1em */
-  margin:0;
-  
-}
-
-.phone-number{
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color:#0f2244;
-
-}
-
-
-
 
 /* header */
 /* section */
@@ -77,12 +33,20 @@ body{
     outline: 1px solid green;
 } */
 
+#sec1{
+    position: relative;
+}
+
+#sec1 .vid{
+    position: absolute; /* poa */
+    
+}
 
 #sec1 .outer{
-    display: flex;
-    justify-content: center;    
-    align-items: center;
-    height: 100%;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
 }
 
 #sec1 .container{
@@ -93,6 +57,11 @@ body{
     text-align: center;
 
 }
+
+#sec1 .container p{
+    margin: 28px 0 100px; /* m40-0-120 */
+}
+
 
 #sec1 .counter{
     display: flex;
