@@ -2,6 +2,7 @@
 
 @import url(common.css);
 @import url(typo.css);
+@import url(footer.css);
 
 /* CDN은 Content Delivery Network의 약자로, 전 세계에 분산된 여러 서버 네트워크를 통해 사용자에게 웹 콘텐츠(예: 웹 사이트, 이미지, 동영상)를 더 빠르게 전달하는 서비스입니다.  */
 /* https://cdnjs.com */
@@ -28,6 +29,13 @@
     height: 100vh;
 }
 
+.ele-center{
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+}
+
 
 /* section1 area */
 /* #sec1 *{
@@ -41,19 +49,20 @@
 
 #sec1 .vid{
     position: absolute; /* poa */
-    /* width: 100%; */
+    width: 100%;
     height: 100%;
     /* 박스 크기를 벗어나는 콘텐츠(비디오) 영역을 숨김 */
     /* overflow: hidden; */
+    background-color: yellow;
     
 }
-
+/* 
 #sec1 .outer{
     position:absolute;
     left: 50%;
     top: 50%;
     transform:translate(-50%, -50%);
-}
+} */
 
 #sec1 .container{
     /* 너비가 100%이지만 1330px은 넘지 않게 */
@@ -89,34 +98,30 @@
 
 /* section2 area */
 
+#sec2{
+    /* background-image: url(./assets/아너스빌/bg_section02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%; */
 
-#sec2 .outer2{
-    display: flex;
-    justify-content: center;
-    position:absolute;
-    left: 50%;
-    top: 50%;
-    transform:translate(-50%,-50%);
-    
+    /* background-image: url(), url(),... 앞에 쓴것이 위로 올라감 */
+    background: url(./assets/아너스빌/bg_percel.jpg) no-repeat 50% 65%/1180px 351px, url(./assets/아너스빌/bg_section02.jpg) no-repeat 50%/cover ;
 }
 
-#sec2 .img2{
+#sec2 .card-list{
     display: flex;
-    justify-content: center;
-    position:absolute;
-    left: 50%;
-    top: 55%;
-    transform:translate(-50%,-50%);
+    justify-content: center;    
 }
+
 
 
 /* card-container */
 /* 배경색: bgc */
 .card-container {
-    background-color: #D8EAF4;
+    background-color: #fff;
     width: 340px;
-    margin:20px;
-    /* overflow: hidden; */
+    margin:10px;
+   
 }
 
 .card-image-wrapper{
@@ -189,6 +194,63 @@
     margin: 0 45px 120px;
     
 }
+
+/* section3 area */
+#sec3{
+    /* 배경이미지 + 
+    Paralax Scrolling
+        - 웹 사이트나 게임등에서 배경 레이어는 느리게 전경 레이어는 빠르게 움직여 입체감과 깊이감을 주는 디자인 기법 */
+    background-attachment: fixed;    /* bga */
+    background: url(./assets/2025_autumn_pick_bg_250916.jpg) no-repeat 50%/cover fixed;
+}
+
+#sec3 .intro{
+    position: absolute;
+    left: 400px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 380px;
+    height: 520px;
+    /* background-color: goldenrod; */
+    text-align: right; /* tar */
+   
+}
+
+
+#sec3 .intro h2 span{
+    display: block;
+}
+
+
+#sec3 .intro p:first-of-type{
+    margin: 48px 0 16px;
+}
+
+#sec3 .intro a{
+    display: inline-block;
+    border:2px solid #fff; /* bd */
+    border-radius: 5px; /* bdrr */
+    margin-top: 28px;
+    padding: 8px 24px; 
+}
+
+#sec3 .intro a:hover{
+    background: var(--white-color);
+    color:#222;
+    text-decoration: underline;
+    transition: .7s; /* trs, 전환 */
+}
+
+
+#sec3 .product{
+    position: absolute;
+    left: 870px;
+    top: 187px;
+    width: 880px;
+    height: 550px;
+    /* background-color: greenyellow; */
+}
+
 
 
 /* footer */

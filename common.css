@@ -1,5 +1,6 @@
 @charset "utp-8";
 
+/* reset(초기화) */
 
 *{
     box-sizing: border-box; /* bx */
@@ -11,17 +12,24 @@ body,h1,h2,h3,p,ul{
 
 
 img{
+    width: 100%;
     vertical-align: top;
 }
 
 video{
     width: 100%;
     height: 100%; 
-    object-fit: cover; 
-
+    object-fit: cover;
 }
 
 ul{
     list-style:none;
     padding: 0;
+}
+
+a{
+    text-decoration: underline; /* tdu, 밑줄 -> a 태그, ins 태그 기본값 */
+    text-decoration: overline; /* tdo, 윗줄 */
+    text-decoration: line-through; /* tdl, 취소선 -> del 태그 기본값*/
+    text-decoration: none; /* tdn, 없음 */
 }
