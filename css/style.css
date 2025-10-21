@@ -52,6 +52,15 @@ a{
     text-decoration: none;
 }
 
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+button{
+    border:none;
+}
+
 :root{
     scroll-behavior: smooth;
 }
@@ -72,7 +81,7 @@ body{
     font: 1.5rem/1.6 "Lato-Regular", sans-serif;
 }
 
-h2{
+#home h2{
     font-weight: 400;
     font-size: 2.4rem;
     color:#fff;
@@ -118,6 +127,10 @@ h2{
 
 
 /* header area */
+header {
+    z-index: 9999;
+    position: fixed;
+}
 
 header .gnb ul{
     position: fixed;
@@ -169,34 +182,69 @@ footer .sns{
 
 #home{
     height: 100vh;
-    background: url(../assets/img/ivan-bandura-2FEE6BR343k-unsplash.jpg) no-repeat 50% 50%/cover;
+    background: url(../assets/img/ivan-bandura-2FEE6BR343k-unsplash.jpg) no-repeat 50% 50%/cover fixed;
 }
 
 /* section area contact.html */
 
-
-#contact .parallax-bg{
-    display: block;
-    position: relative;
-    background: url(../assets/img/parallax3.jpg) no-repeat 50% 50%/fixed;
-    width: 1905px;
-    height: 400px;
-}
-
-#contact .container{
-    display: block;
-    justify-content: center;
-    position: relative;
+#contact h3,p{
     text-align: center;
 }
 
+#contact .contact{
+    width: 600px;
+}
 
-#contact .container .mapcon{
-    display: flex;
-    justify-content: center;
+#contact .parallax-bg{
+    position: relative;
+    background: url(../assets/img/parallax3.jpg) no-repeat 50% 50%/cover fixed;
+    height: 400px;
+}
+
+#contact .parallax-bg h2{
+    background: transparent;
 }
 
 
-#contact .container .contents{
-    text-align-last: left;
+#contact .container{
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    margin: 48px auto 96px;    
+}
+
+#contact .map{
+    width: 280px;
+    height: 160px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 32px;
+}
+
+#contact .contact p{
+    margin: 24px 0 26px;
+}
+
+#contact input{
+    width: 100%;
+    height: 45px;
+    padding-left: 16px;
+}
+
+#contact .frm-input{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#contact textarea{
+    width: 100%;
+    /* 텍스트 영역 상자의 크기 조정 불가 */
+    resize:none;
+    height: 150px;
+    margin-top: 10px;
+}
+
+#contact button{
+    
 }
