@@ -1,19 +1,33 @@
 @charset "utf-8";
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css);
+
 /* 웹 폰트: 방법1-CDN 방식 */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap');
+
 
 /* 웹 폰트: 방법2- @font-face -> CDN x  */
 
 @font-face{
     /* 사용자 정의 폰트명 */
     font-family: Lato-Regular;
-    src:url(./../assets/font/Lato/Lato-Regular.ttf);
+    /* 상대주소 */
+    /*  / 작업 영역 폴더(root)
+        ./ 현재위치, 한 번만
+        ../ 부모위치, 여러 번
+        예) a폴더> b 폴더> c폴더: 파일.html
+        예) a폴더:../../이미지.jpg
+    */
+
+    /* 내 컴퓨터에서 볼 때  / 는 현재 작업 폴더 작업 폴더가 바뀔 경우 상대경로 또한 바뀜 */
+    src:url(../assets/font/Lato/Lato-Regular.ttf);
 }
 
 @font-face{
     /* 사용자 정의 폰트명 */
     font-family: Lato-Thin;
-    src:url(./../assets/font/Lato/Lato-Tin.ttf);
+    /* 절대주소 */
+    /* URL: 프로토콜://도메인/폴더경로/파일 */
+    src:url(https://minho60.github.io/jfs/assets/font/Lato-Thin.ttf);
 }
 
 
@@ -33,24 +47,55 @@ ul{
     list-style: none;
 }
 
+
+a{
+    text-decoration: none;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+
+
 /* typograph(타이포그래피) */
+/* :root는 html 태그를 선택한다. */
+:root{
+    font-size: 10px;
+}
+
+
+
 body{
-    font-family: "Lato", sans-serif;
+    /* 단위:em-> rem 은 :root 에서 지정한 크기의 배수
+        예) 10px * 1.5 배 -> 15px
+    */
+    font: 1.5rem/1.6 "Lato-Regular", sans-serif;
 }
 
 h2{
     font-weight: 400;
-    font-size: 24px;
+    font-size: 2.4rem;
     color:#fff;
     /* 글자 사이 간격: 자간 */
-    letter-spacing: 10px;
-     text-transform: uppercase;    
-     background: gray;
-    /* 일반적으로 좌우패칭을 상하 보다 더 준다. */
-    padding: 8px 24px 10px 30px;
+    letter-spacing: 1rem; /* ls */
+    text-transform: uppercase;    
+    
+}
+
+footer a,footer p{
+    color:#fff;
 }
 
 
+/* A태그는 글자색의 경우 a 태그에 직접 지정 */
+footer .top-btn a{
+    color:#333;
+}
+
+footer .sns i{
+    font-size: 2.4rem;
+    margin: 0 -3px;
+}
 
 
 /* common(공통) */
@@ -60,15 +105,47 @@ h2{
     left: 50%;  
     top: 50%;
     transform: translate(-50%, -50%); /* trft */
+    background: #404040;
+    /* 일반적으로 좌우패칭을 상하 보다 더 준다. */
+    padding: 8px 24px 10px 30px;
     
 }
 
+/* section area */
 
 #home{
     height: 100vh;
     background: url(../assets/img/ivan-bandura-2FEE6BR343k-unsplash.jpg) no-repeat 50% 50%/cover;
 }
 
-#sec{
 
+
+
+
+/* footer area */
+
+footer {
+    background: #555;
+    text-align: center;
+    padding: 100px;
 }
+
+footer:hover{
+    background: #111;
+}
+
+/* to the top 버튼  */
+footer .top-btn{
+    display: inline-block;
+    background: #ddd;
+    padding: 8px 16px;
+}
+
+footer .top-btn i{
+    margin-right: 8px;
+}
+
+footer .sns{
+    margin: 30px 0 40px;
+}
+
