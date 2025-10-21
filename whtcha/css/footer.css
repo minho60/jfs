@@ -4,7 +4,7 @@
 
 /* inquiry: 문의 */
 footer .inquiry{
-    background: #fff url(./footer_img.png) no-repeat 0 100%;
+    background: #fff url(../assets/img/footer_img.png) no-repeat 0 100%;
     height: 426px;  
     padding-top: 120px;
 }
@@ -35,7 +35,7 @@ footer .inquiry .faq-btn{
 
 footer .inquiry .faq-btn span{
     /* background: 색 url() 반복 x위치 y위치/크기 */
-    background: url(./icon_main_inquiry_01.png) no-repeat 0 0/contain ;
+    background: url(../assets/img/icon_main_inquiry_01.png) no-repeat 0 0/contain ;
     padding-left: 67px;
 
 }
@@ -50,7 +50,7 @@ footer .inquiry .consult-btn{
 }
 
 footer .inquiry .consult-btn span{
-    background: url(./icon_main_inquiry_02\ .png) no-repeat 0 0/contain;
+    background: url(../assets/img/icon_main_inquiry_02\ .png) no-repeat 0 0/contain;
     padding-left: 57px;
 }
  
@@ -58,7 +58,7 @@ footer .inquiry .consult-btn span{
 /* info: 정보 */
 
 footer .info{
-   background: #2C2D2F url(./logo.png) no-repeat 80px 70px;
+   background: #2C2D2F url(../assets/img/logo.png) no-repeat 80px 70px;
    /* 기본값은 background-origin: padding-box; */
    /* background-origin: content-box; */
    padding: 50px 250px;

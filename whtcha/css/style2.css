@@ -105,7 +105,7 @@
     background-position: 50%; */
 
     /* background-image: url(), url(),... 앞에 쓴것이 위로 올라감 */
-    background: url(./assets/아너스빌/bg_percel.jpg) no-repeat 50% 65%/1180px 351px, url(./assets/아너스빌/bg_section02.jpg) no-repeat 50%/cover ;
+    background: url(../assets/img/bg_percel.jpg) no-repeat 50% 65%/1180px 351px, url(../assets/img/bg_section02.jpg) no-repeat 50%/cover ;
 }
 
 #sec2 .card-list{
@@ -201,7 +201,7 @@
     Paralax Scrolling
         - 웹 사이트나 게임등에서 배경 레이어는 느리게 전경 레이어는 빠르게 움직여 입체감과 깊이감을 주는 디자인 기법 */
     background-attachment: fixed;    /* bga */
-    background: url(./assets/2025_autumn_pick_bg_250916.jpg) no-repeat 50%/cover fixed;
+    background: url(../assets/img/2025_autumn_pick_bg_250916.jpg) no-repeat 50%/cover fixed;
 }
 
 #sec3 .intro{
