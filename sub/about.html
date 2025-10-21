@@ -1,85 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>김민호</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <!-- header(헤더) area -->
-    <!--
-        정보 구조(IA) 설계
-        메인 페이지1: Home
-                -> index.html
-        서브 페이지2: About me
-                -> about.html
-        서브 페이지3: work(portpolio, project)
-                -> work.html
-        서브 페이지4: contact us
-                -> contact.html
-    -->
-    
+    <link rel="stylesheet" href="/jfs/css/style.css" />
+  </head>
+  <body>
+    <!-- header -->
     <header>
-        <!-- 로고 -->
-        <!-- h1.logo>a[href=index.html] -->
-        <h1 class="logo"><a href="index.html">home</a></h1>
-        <!-- 내비게이션: GNB -->
-        <nav>
-            <ul>
-                <li><a href="about.html">About me</a></li>
-                <li><a href="work.html">My work</a></li>
-                <li><a href="contact.html">Contct us</a></li>
-            </ul>
+      <!-- 1depth(깊이) GNB:Grobal(전역) Navigation Bar -->
+       <nav class="gnb">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-user"></i>About</a></li>
+          <li><a href="work.html"><i class="fa-solid fa-briefcase"></i>Portfolio</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
 
-        </nav>
+        </ul>
+       </nav>
 
 
     </header>
 
-    <section>
-        <h2>About me</h2>
-    </section>
 
-    <!-- section(본문) area -->
-    <!-- https://www.honorsville.co.kr/ -->
-    <div class="card-container">
-        <div class="card-image-wrapper">
-            <img src="https://www.honorsville.co.kr/upload/temp/20255303432444.jpg" alt="충주연수 경남아너스빌 센터원 아파트 외관"
-                class="card-image">
-            <!-- <img src="apartment-complex.jpg" alt="충주연수 경남아너스빌 센터원 아파트 외관" class="card-image"> -->
-        </div>
-
-        <div class="card-content">
-            <div class="card-header">
-                <span class="tag-badge">분양중</span>
-                <!-- 폼 요소: 회원가입, 로그인, 게시판, 상품구매 및 결재 -->
-                <button class="like-button" aria-label="관심 단지로 추가">
-                </button>
-            </div>
-
-            <h2 class="card-title">충주연수 경남아너스빌 센터원</h2>
-
-            <div class="card-details">
-                <p>충청북도 충주시 연수동 787-25 일원</p>
-                <p>243세대</p>
-            </div>
-
-            <div class="card-contact">
-                <p class="phone-number">1866-0234</p>
-            </div>
-        </div>
+    <!-- section -->
+    <div id="about">
+      <h2>About</h2>
     </div>
 
-    <!-- footer area -->
-     <footer>
-        <p>&copy; 2025KMH, All right reservase</p>
-     </footer>
-
-</body>
-
-
-
+    <!-- footer -->
+    <footer>
+      <!-- 폰트어썸: https://fontawesome.com -->
+      <!-- 1. 라이브러리 CDN 연결: https://cdnjs.com  -->
+      <!-- 2. 아이콘을 검색 하여 지정-->
+      <div class="top-btn"><a href="#top"><i class="fa-solid fa-arrow-up"></i>To The Top</a></div>
+      <div class="sns">
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-square-snapchat"></i></a>
+        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+      <p>&copy;2025 KMH. All rights reserved</p>
+    </footer>
+  </body>
 </html>

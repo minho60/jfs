@@ -78,8 +78,11 @@ h2{
     color:#fff;
     /* 글자 사이 간격: 자간 */
     letter-spacing: 1rem; /* ls */
-    text-transform: uppercase;    
-    
+    text-transform: uppercase;        
+}
+
+header a{
+    color:#fff;
 }
 
 footer a,footer p{
@@ -98,6 +101,7 @@ footer .sns i{
 }
 
 
+
 /* common(공통) */
 
 h2{
@@ -111,16 +115,27 @@ h2{
     
 }
 
-/* section area */
 
-#home{
-    height: 100vh;
-    background: url(../assets/img/ivan-bandura-2FEE6BR343k-unsplash.jpg) no-repeat 50% 50%/cover;
+
+/* header area */
+
+header .gnb ul{
+    position: fixed;
+    display: flex;
 }
 
+header .gnb li a{
+    display: inline-block;
+    padding: 8px 16px;
+}
 
+header .gnb li a:hover{
+   background:#b4b3b3;
+}
 
-
+header .gnb li i {
+    margin-right: 8px;
+}
 
 /* footer area */
 
@@ -149,3 +164,39 @@ footer .sns{
     margin: 30px 0 40px;
 }
 
+
+/* section area: index.html */
+
+#home{
+    height: 100vh;
+    background: url(../assets/img/ivan-bandura-2FEE6BR343k-unsplash.jpg) no-repeat 50% 50%/cover;
+}
+
+/* section area contact.html */
+
+
+#contact .parallax-bg{
+    display: block;
+    position: relative;
+    background: url(../assets/img/parallax3.jpg) no-repeat 50% 50%/fixed;
+    width: 1905px;
+    height: 400px;
+}
+
+#contact .container{
+    display: block;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+
+#contact .container .mapcon{
+    display: flex;
+    justify-content: center;
+}
+
+
+#contact .container .contents{
+    text-align-last: left;
+}
