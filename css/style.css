@@ -245,6 +245,14 @@ footer .sns{
     margin-top: 10px;
 }
 
-#contact button{
-    
+#contact button {
+    background: #111;
+    padding: 12px 24px;
+    margin-top: 10px;
+}
+#contact i {
+    margin-right: 8px;
+}
+#contact .addr i {
+    margin-right: 16px;
 }

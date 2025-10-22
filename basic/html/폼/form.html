@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <!-- method의 초기값: get -->
+    <form action="/action_page.php" method="get">
+      <label for="fname">First name:</label><br />
+      <!-- value는 input type= text 일 때 박스의 초기값 -->
+      <!-- name은 폼요소를 구별하는 이름: js또는 DB에서 사용 -->
+      <input type="text" id="fname" name="fname" value="John" /><br />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+      <!-- input type=submit 일 때 value는 입력 초기값 -->
+      <input type="submit" value="Submit" />
+    </form>
+
+    <br />
+
+    <!-- 로그인 창, 로그인 페이지 -->
+    <form action="/login.jsp" method="POST">
+      <!-- label for 속성값과 input id 속성값이 같아야 한다.  -->
+      <!-- <label for="username">아이디:</label> -->
+      <!-- placeholder:회색의 안내 텍스트 -->
+      <!-- required 속성은 필수 입력 박스  -->
+
+      <label for="username">아이디:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        required
+        placeholder="아이디를 입력하세요"
+      /><br />
+
+      <label for="password">비밀번호:</label>
+      <input type="password" id="password" name="password" required /><br />
+
+      <input type="submit" value="로그인" />
+    </form>
+  </body>
+</html>
