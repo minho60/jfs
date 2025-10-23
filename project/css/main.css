@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 @import url(common.css);
 @import url(typo.css);
 @import url(footer.css);
@@ -21,6 +20,111 @@
 
 /* header */
 /* section */
+
+/* main typo */
+
+#sec1 {
+    color:var(--white-color);
+}
+
+#sec1 h2{
+    font-size: 60px;
+    font-weight: var(--fwm);
+}
+
+#sec1 p{
+    font-size: 24px;
+}
+
+#sec1 span:first-of-type{
+    font-size: 40px;
+}
+
+#sec1 span:last-of-type{
+    font-size: 17px;
+}
+
+#sec1 .counter div {
+    /* 색상은 16진수 영문 대소 구별 하지않는다. */
+    /* 부모요소(#sec1)에서 지정한 글자색 보다 자식요소에 지정한 속성이 우선 적용된다. */
+    color:var(--sub-color);
+}
+
+
+/* sec2 area */
+
+
+
+#sec2 .card-title{
+    font-size: 22px;
+    color: #333;
+    line-height: 27px;
+}
+
+#sec2 .card-details p{
+  /* p는 위아래 기본 마진이 있다. 폰트크기의 1em */
+  margin:0;
+  
+}
+
+#sec2 .phone-number{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color:#0f2244;
+
+}
+
+
+/* section3 area */
+
+
+#sec3 .intro{
+    color:var(--white-color)
+}
+
+#sec3 .intro a{
+     color:var(--white-color)
+}
+
+#sec3 .intro h2{
+    /* 단어별로 첫 글자를 대분자 */
+    text-transform: capitalize; /* ttc */
+    /* 모두 소문자 */
+    text-transform: lowercase; /* ttl */
+    /* 모두 대문자 */
+    text-transform: uppercase; /* ttu */
+    line-height: 1;
+}
+
+#sec3 .intro h2 span:nth-of-type(1){
+    font-size: 100px;
+    letter-spacing: 8px;
+}
+#sec3 .intro h2 span:nth-of-type(2){
+    font-size: 80px;
+    letter-spacing: 5px; /* ls */
+}
+#sec3 .intro h2 span:nth-of-type(3){
+    font-size: 45px;
+    letter-spacing: 6px;
+}
+
+#sec3 .intro p:nth-of-type(1){
+    font-size: 28px;
+    line-height: 1;
+}
+
+#sec3 .intro p:first-of-type b{
+    font-weight: var(--fwm);
+}
+
+#sec3 .intro p:last-of-type b{
+    font-weight: var(--fwm);
+}
+
+
+
 /* section common(공통) */
 
 .sec{

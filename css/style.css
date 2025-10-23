@@ -109,6 +109,41 @@ footer .sns i{
     margin: 0 -3px;
 }
 
+#contact h3,p{
+    color:#555;
+}
+
+#contact h3{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#contact a{
+    color:#555;
+}
+    
+
+#contact .contact p {
+    text-align-last: left;
+}
+
+
+
+
+textarea{
+     font: 1.5rem/1.6 "Lato-Regular", sans-serif;
+}
+
+/* 가상 요소 클래스
+        ::placeholder
+*/
+ ::placeholder{
+    font: 1.5rem/1.6 "Lato-Regular", sans-serif;
+    color:#ccc;
+ }
+
+
+
 
 
 /* common(공통) */
@@ -243,6 +278,8 @@ footer .sns{
     resize:none;
     height: 150px;
     margin-top: 10px;
+    padding-top: 16px;
+    padding-left: 16px;
 }
 
 #contact button {
@@ -256,3 +293,8 @@ footer .sns{
 #contact .addr i {
     margin-right: 16px;
 }
+
+#contact .frm-btn{
+    text-align: right;
+}
+

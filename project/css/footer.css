@@ -1,4 +1,38 @@
 @charset "utf-8";
+
+
+/* footer typo */
+
+footer{
+    color: #686C64;
+}
+
+footer a{
+    color: var(--white-color);
+}
+
+footer .inquiry h2{
+    color: var(--gray3);
+    font-size: 50px;
+}
+
+footer .inquiry .tel-area p{
+    font-size: 26px;
+    font-weight: 100;
+}
+
+footer .inquiry .tel-area a{
+    color: var(--gray3);
+    font-size: 50px;
+    font-weight: 700;
+}
+
+footer .inquiry .con-area {
+    font-size: 20px;
+}
+ 
+
+
 /* footer common */
 
 
@@ -92,4 +126,7 @@ footer .util-box{
 
 footer .left-info ul{
     display: flex;
+}
+footer .sns a{
+    margin: 5px;
 }

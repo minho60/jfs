@@ -102,9 +102,52 @@
         비밀번호<input type="password" name="user_pw1" required><br>
         <!-- disable: 사용불가, 데이터 전송 ❌ -->
         비밀번호 확인<input type="password" name="user_pw2" required disabled><br>
-        email<input type="email" name="user_email" multiple ><br>
+        <!-- 
+        정규식
+            ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+            ^                   문자열의 시작
+            []                  문자열 그룹
+            +                   반복사용
+            a-z                 영문소문자
+            A-Z                 영문대문자
+            0-9                 숫자
+            ._%+-               5개 특수문자
+            [abc]               a또는 b또는 c중 하나
+            [a-zA-Z0-9._%+-]    영문 대소문자, 숫자, 특수문자는 ._%+-중 하나
+            a+                  a, aa, aaa,...
+            a*                  a, 빈문자열, aa, aaa, ...
+            [a-zA-Z0-9._%+-]+   영문 대소문자, 숫자, 특수문자는 ._%+- 중하나 문자가 1개이상 반복 사용
+            {}                  자릿수
+            {2, }               2자 이상   
+            @                   문자@
+            \.                  문자 .
+            .                   임의문자 1개        
+            $                   문자열의 끝          
+
+        
+        -->
+
+
+        email<input type="email" name="user_email" multiple pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" ><br>
         url<input type="url" name="user_url"><br>
-        tel<input type="tel" name="user_tel" pattern="/^\d{3}-\d{4}-\d{4}$/"><br>
+
+        <!--
+        정규식
+            ^\d{2,3}-\d{3,4}-\d{4}$ 
+            ^(캐럿 caret)  문자열의 시작
+            \d             숫자(digit)    
+            {숫자}         개수
+            {숫자,숫자}    최소숫자~최대숫자
+            {2,3}          최소2자~최대3자        
+            $(달러 dollar) 문자열의 끝
+
+
+
+         -->
+
+
+
+        tel<input type="tel" name="user_tel" pattern="^\d{2,3}-\d{3,4}-\d{4}$"><br>
 
         <!-- 검색창 -->
         <input type="search" name="search_data" autocomplete="on" autofocus>
