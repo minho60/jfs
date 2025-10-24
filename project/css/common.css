@@ -30,7 +30,7 @@
     --sub-color: #3E3A38;
     --white-color: #fff;
     --gray5: #555;
-    --gray: #333;
+    --gray3: #333;
     --fwm:500; /* font-weight: medium; */
     font-size: 10px;
     
@@ -45,7 +45,7 @@ body,h1,h2,h3,p,ul{
 body{
     /* font: 크기/줄간격 글꼴1, 글꼴2; */
     font:16px/1.5 'Noto Sans KR', sans-serif;
-    color:var(--main-color);
+    color:var(--gray5);
 }
 
 
