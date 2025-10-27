@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        /* 
+        transition-property: all (기본값)
+        transition-duration (필수)
+        transition-timing-function: ease
+            ease
+            ease-in
+            ease-out
+            ease-in-out
+            linear (선형): 등속
+        transition-delay
+
+        속기 속성
+        transition: [속성] 전환시간 [가속도, easing] [지연시간];
+        transition: 전환시간 지연시간; (순서 있다.)
+            - 단위: s(second, 초)
+
+        */
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition-property: width; /* trsp */
+            transition-duration: 1s; /* trs1s */
+            transition-timing-function: ease; /* trst */
+            transition-delay: 2s; /* trsde2s */
+        }
+
+        div:hover{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div>전환</div>
+
+
+</body>
+
+</html>

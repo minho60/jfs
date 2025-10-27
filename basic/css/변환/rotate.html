@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위치이동</title>
+    <style>
+        /*
+        transform: 값 값 값 ...;
+            translate(x,y)      x. y위치 이동
+            translateX(x)        x위치 이동 (좌우)
+            translateY(y)        y위치 이동 (상하)
+            rotate()            회전    
+            scaleX()            크기    
+            scaleY()
+            scale()
+            skewX()             기울기
+            skewY()
+            skew()
+            matrix()            혼합
+     */
+
+        .close {
+            /* background: lightpink; */
+            line-height: 1;
+            
+            /* 변환은 블록 레벨 요소에 지정한다. */
+            display: inline-block;
+           transform: rotate(0deg);
+           transition: .3s;
+           transform-origin: 52% 58%;
+           /* duration의 값이 작을 수로 속도는 빨라진다 */
+            
+        }
+
+
+        .close:hover  {
+            /* transform: rotae(); 단위: deg(degree), 각도0~360 */
+
+          transform: rotate(720deg);
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+   <span class="close">❌</span>
+
+
+</body>
+
+</html>
