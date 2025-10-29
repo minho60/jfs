@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js: 변수</title>
+</head>
+<body>
+    <!-- page 332, 333 -->
+    <script>
+        /* 
+            변수(Variable)란?
+            var
+            const
+            let
+                박스, 그릇, 폴더, 저장공간
+
+            1. 문자, 특수문자(_,$)로 시작
+            2. 대소문자 구별
+            3. 한글 사용 가능하지만 영문 권장
+            4. 예약어는 사용 불가
+                예) true, false, var, let, const
+            
+                
+            표기법
+                낙타(카멜)표기법: 첫 단어는 대문자 아님
+                    예) getElementById
+                    예) userNumber
+                파스칼 표기법: 첫 단어 부터 대문자
+                    예) UserNumber
+                케밥 표기법
+                    예) background-color
+                스네이크 표기법
+                    예) MAX_VOLUME
+
+        */
+        // 변수 선언 키워드: var, let, const
+        // 올바른 사용
+        // 변수 작성 방법
+        // 1. 변수 키워드 변수명;
+        var x; //변수 선언 (정의)
+        console.log("아래의 x값은" +x +"이다.");
+        // 2. 변수 키워드 변수명=값;
+        // =은 할당(대입) 연산자 (오른쪽에서 왼쪽으로)
+        // ==은 비교연산자(같다)
+        // ===은 비교연산자(같다)
+        // 주의! 변수 키워드 값= 변수명; (x)
+        var y=10; //10을 y 변수에 할당
+                    //변수 선언 및 할당
+            y=50;        
+            // =은 할당(대입) 연산자 (오른쪽에서 왼쪽으로)
+        var x=y;
+        console.log("아래의 x값은" +x +"이다.");
+        // 변수,변수,변수;
+        var a,b,c;
+        //변수=값, 변수=값, ...
+        // 연산자와 피연산자 사이는 붙이거니 띄어쓰거나 관계없다.
+        var a=10, b=11, c=12;
+        // var a=10;
+        // var b=10;
+        // var c=10;
+        var a=b=c=10;
+        var name="홍길동", age=25;
+        //산술연산자: +, -, *, /
+        //대입 연산자
+        //연산 우선순위: 산술> 대입
+        var total=a+b+c;
+
+
+        // //잘못된 표현
+        // var 7num=100; //문자로 시작
+        // var &num=100; //특수문자는 _$
+        // var true=1; //예약어 사용
+        // var 10=x; // 숫자, 값=변수;0
+        // var a+b=20; // + 특수문자
+        // var "홍길동"=name; // 값=변수;
+        // var get Number=100; // 띄어쓰기 x
+        // var a,b,c=100; //
+        var a, b, c=100;
+        console.log("a="+a)
+        console.log("b="+b)
+        console.log("c="+c)
+ 
+    </script>
+    
+</body>
+</html>

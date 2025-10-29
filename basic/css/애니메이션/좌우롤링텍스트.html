@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌우롤링텍스트</title>
+    <style>
+        /* 초기화 */
+        body {
+            margin: 0;
+            line-height: 1;
+        }
+
+        /* 롤링텍스트 */
+        .marquee {
+            font-size: 90px;
+            font-weight: bold;
+            letter-spacing: 12px;
+            border: 1px solid #000;
+
+            white-space: nowrap; /* 텍스트 줄바꿈 */
+            overflow: hidden;
+        }
+
+
+        .marquee .inner {
+          display: flex;
+        }
+        
+        .marquee .inner span {
+            padding-right: 30px;
+            animation: slide 20s linear infinite;
+        }
+
+        .marquee .inner-right{
+            display: flex;
+        }
+        
+        .marquee .inner-right span{
+            padding-right: 30px;
+            animation: slide 20s linear infinite;
+            animation-direction: reverse;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+      
+    </style>
+
+</head>
+
+<body>
+    <div class="marquee">
+        <div class="inner">
+            <span>CONSIDERATION ● AFFINITY ● PRESTIGE ●</span>
+            <span>CONSIDERATION ● AFFINITY ● PRESTIGE ●</span>
+        </div>
+        <div class="inner-right">
+            <span>CONSIDERATION ● AFFINITY ● PRESTIGE ●</span>
+            <span>CONSIDERATION ● AFFINITY ● PRESTIGE ●</span>
+        </div>
+    </div>
+
+</body>
+
+</html>

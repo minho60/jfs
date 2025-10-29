@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        /* 
+        애니메이션 코드 (필수)
+        @keyframes 애니메이션 이름{
+            from{ CSS속성: 값;}
+            to{CSS속성: 값;}
+        }
+
+
+        @keyframes 애니메이션 이름{
+            0%{CSS속성: 값;}
+            100%{}
+
+        }
+        
+        */
+        @keyframes ball {
+            0% {
+                transform: translateY(0);
+                animation-timing-function: ease-in;
+            }
+
+            100% {
+                transform: translateY(300px);
+                animation-timing-function: ease-out;
+            }
+
+        }
+
+        /* 
+            애니메이션을 적용시킬 요소
+                이름: animation-name: (필수)
+                동작시간: animation-duration: (필수)
+                가속도: animation-timing-function: ease
+                지연시간: animation-delay
+                반복횟수: animation-iteration-count:1; (기본값)
+                방향: animation-direction
+                상태 유지: animation-fill-mode
+                    from-> to-> 초기값
+                    to 에서 멈춤: forwards;
+                animation-play-state: running; (기본값) 
+                animation-play-state: pause;  정지
+        */
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            transform: translateY(0);
+            animation-name: ball;
+            animation-duration: 1s;
+            animation-iteration-count: 5;
+            animation-direction: alternate;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div>
+        Animation
+    </div>
+
+</body>
+
+</html>

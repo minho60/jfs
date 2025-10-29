@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js: 입출력</title>
+</head>
+<body>
+    <h1>Js:입출력</h1>
+    <p id="result">여기에 출력됩니다.</p>
+
+
+    <script>
+
+        /* 
+            문법
+                객체.메서드(argument, arg, ...)
+                함수()
+
+            window는 자바스크립트의 최상위 객체로 window객체 키워드는 생략 가능
+            출력
+                window.alert()
+                console.log()
+                document.write()
+
+            입력
+                window.prompt()    
+
+            DOM 요소 선택    
+                document.getElementById('아이디')
+        
+        */
+
+
+       //경고장 출력 
+       //표현식: 하나의 결과값을 표현할 수 있는 식
+       window.alert("문자열");
+       alert((100+10)+'\n'+'문자열'); //alert 에서 줄 바꿈은 '\m'으로 한다
+       alert(100);
+
+       //개발자모드 콜솔영역 출력
+       console.log("문자열");
+       console.log('\n'); //줄 바꿈 처리
+       console.log('\n');
+       console.log('\n');
+
+       //body영역에 출력
+       document.write("문자열"+"<br>");
+       document.write('\n'); // 줄 바꿈 되지 않는다.
+       document.write('<br>');
+       document.write(100+10);
+
+       //body영역 안의 p 태그에 출력
+       const p = document.getElementById("result");
+       p.innerHTML="Hello";
+
+    // alert()과 console.log()에서의 줄바꿈은 '\n'로 하고,
+    // document.write()에서 줄바꿈은 '<br>' 태그로 한다.
+
+
+       //입력
+       //prompt('메세지',기본값);
+       var city = prompt('지역을 입력하세요.','서울');
+
+       //출력
+       alert('당신이 사는곳은 ' +city+ '입니다.');
+
+
+    </script>
+</body>
+</html>
