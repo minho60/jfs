@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js:비트논리연산자</title>
+</head>
+
+<body>
+    <script>
+    /*    
+        2진법(0,1)
+        8진법(0~7)
+        16진법(0~15, A~f)
+        10진법(0~9) 
+
+        10진수  2진수   8진수   16진수
+        0       0000     0  
+        1       0001     1
+        2       0010     2
+        3       0011     3
+        4       0100     4
+        5       0101     5
+        6       0110     6
+        7       0111     7
+        8       1000     10  
+        9       1001     11
+        10      1010     12  
+        100     1100100  144  
+
+
+        */
+        const x = 5;    // 0101, 선언및 할당
+        const y = 7;    // 0111
+       
+        // x=10; //재할당❌ Uncaught TypeError: Assignment to constant variable.
+
+        let result;
+
+        /* 
+            & 비트곱
+            0101
+            0111
+        ------------
+            0101
+        */
+        document.write("x & y = " + (x & y) + "<br>"); //5
+
+        /* 
+           | 비트합
+           0101
+           0111
+           ------
+           0111
+        */
+     
+        document.write("x | y = " + (x | y) + "<br>"); //7
+
+        /* 
+        ^ 배타적 비트합
+        0101
+        0111
+        ------
+        0010  
+        */
+        document.write("x ^ y = " + (x ^ y) + "<br>"); // 2
+
+        /* 
+        ~비트부정
+        0101
+        ------
+        1010
+        */
+        document.write("~x = " + (~x) + "<br>"); //-6
+
+    </script>
+</body>
+
+</html>
