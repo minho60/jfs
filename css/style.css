@@ -7,7 +7,7 @@
 
 /* 웹 폰트: 방법2- @font-face -> CDN x  */
 
-@font-face{
+@font-face {
     /* 사용자 정의 폰트명 */
     font-family: Lato-Regular;
     /* 상대주소 */
@@ -19,109 +19,117 @@
     */
 
     /* 내 컴퓨터에서 볼 때  / 는 현재 작업 폴더 작업 폴더가 바뀔 경우 상대경로 또한 바뀜 */
-    src:url(../assets/font/Lato/Lato-Regular.ttf);
+    src: url(../assets/font/Lato/Lato-Regular.ttf);
 }
 
-@font-face{
+@font-face {
     /* 사용자 정의 폰트명 */
     font-family: Lato-Thin;
     /* 절대주소 */
     /* URL: 프로토콜://도메인/폴더경로/파일 */
-    src:url(https://minho60.github.io/jfs/assets/font/Lato-Thin.ttf);
+    src: url(https://minho60.github.io/jfs/assets/font/Lato-Thin.ttf);
 }
 
 
 
 
 /* reset(초기화) */
-*{
+* {
     box-sizing: border-box;
 }
 
-body,h1,h2,h3,p,ul{
+body,
+h1,
+h2,
+h3,
+p,
+ul {
     margin: 0;
 }
 
-ul{
+ul {
     padding: 0;
     list-style: none;
 }
 
 
-a{
+a {
     text-decoration: none;
 }
 
-iframe{
+iframe {
     width: 100%;
     height: 100%;
 }
 
-button{
-    border:none;
+button {
+    border: none;
 }
 
-:root{
+:root {
     scroll-behavior: smooth;
 }
 
 
 /* typograph(타이포그래피) */
 /* :root는 html 태그를 선택한다. */
-:root{
+:root {
     font-size: 10px;
 }
 
 
 
-body{
+body {
     /* 단위:em-> rem 은 :root 에서 지정한 크기의 배수
         예) 10px * 1.5 배 -> 15px
     */
     font: 1.5rem/1.6 "Lato-Regular", sans-serif;
 }
 
-#home h2{
+#home h2 {
     font-weight: 400;
     font-size: 2.4rem;
-    color:#fff;
+    color: #fff;
     /* 글자 사이 간격: 자간 */
-    letter-spacing: 1rem; /* ls */
-    text-transform: uppercase;        
+    letter-spacing: 1rem;
+    /* ls */
+    text-transform: uppercase;
 }
 
-header a{
-    color:#fff;
+header a {
+    color: #fff;
 }
 
-footer a,footer p{
-    color:#fff;
+footer a,
+footer p {
+    color: #fff;
 }
 
 
 /* A태그는 글자색의 경우 a 태그에 직접 지정 */
-footer .top-btn a{
-    color:#333;
+footer .top-btn a {
+    color: #333;
 }
 
-footer .sns i{
+footer .sns i {
     font-size: 2.4rem;
     margin: 0 -3px;
 }
 
-#contact h3,p{
-    color:#555;
+#contact h3,
+p {
+    color: #555;
 }
 
-#contact h3{
+#contact h3 {
     margin-top: 50px;
     margin-bottom: 30px;
 }
 
-#contact a{
-    color:#555;
+#contact a {
+    color: #555;
 }
-    
+
 
 #contact .contact p {
     text-align-last: left;
@@ -130,17 +138,17 @@ footer .sns i{
 
 
 
-textarea{
-     font: 1.5rem/1.6 "Lato-Regular", sans-serif;
+textarea {
+    font: 1.5rem/1.6 "Lato-Regular", sans-serif;
 }
 
 /* 가상 요소 클래스
         ::placeholder
 */
- ::placeholder{
+::placeholder {
     font: 1.5rem/1.6 "Lato-Regular", sans-serif;
-    color:#ccc;
- }
+    color: #ccc;
+}
 
 
 
@@ -148,17 +156,43 @@ textarea{
 
 /* common(공통) */
 
-h2{
+h2 {
     position: absolute;
-    left: 50%;  
+    left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* trft */
+    transform: translate(-50%, -50%);
+    /* trft */
     background: #404040;
     /* 일반적으로 좌우패칭을 상하 보다 더 준다. */
     padding: 8px 24px 10px 30px;
-    
+
 }
 
+/* 돌아가는 원 */
+.circle_ani {
+    position: absolute;
+    right: 0;
+    width: 135px;
+    height: 136px;
+    animation: circle 30s linear infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg) scale(3);
+    }
+
+    100% {
+        transform: rotate(720deg) scale(3);
+    }
+
+}
+
+circle_ani:hover {
+    transform: rotate(360deg);
+    /* trfr */
+    /* 기본값 */
+}
 
 
 /* header area */
@@ -167,18 +201,18 @@ header {
     position: fixed;
 }
 
-header .gnb ul{
+header .gnb ul {
     position: fixed;
     display: flex;
 }
 
-header .gnb li a{
+header .gnb li a {
     display: inline-block;
     padding: 8px 16px;
 }
 
-header .gnb li a:hover{
-   background:#b4b3b3;
+header .gnb li a:hover {
+    background: #b4b3b3;
 }
 
 header .gnb li i {
@@ -193,62 +227,63 @@ footer {
     padding: 100px;
 }
 
-footer:hover{
+footer:hover {
     background: #111;
 }
 
 /* to the top 버튼  */
-footer .top-btn{
+footer .top-btn {
     display: inline-block;
     background: #ddd;
     padding: 8px 16px;
 }
 
-footer .top-btn i{
+footer .top-btn i {
     margin-right: 8px;
 }
 
-footer .sns{
+footer .sns {
     margin: 30px 0 40px;
 }
 
 
 /* section area: index.html */
 
-#home{
+#home {
     height: 100vh;
     background: url(../assets/img/ivan-bandura-2FEE6BR343k-unsplash.jpg) no-repeat 50% 50%/cover fixed;
 }
 
 /* section area contact.html */
 
-#contact h3,p{
+#contact h3,
+p {
     text-align: center;
 }
 
-#contact .contact{
+#contact .contact {
     width: 600px;
 }
 
-#contact .parallax-bg{
+#contact .parallax-bg {
     position: relative;
     background: url(../assets/img/parallax3.jpg) no-repeat 50% 50%/cover fixed;
     height: 400px;
 }
 
-#contact .parallax-bg h2{
+#contact .parallax-bg h2 {
     background: transparent;
 }
 
 
-#contact .container{
+#contact .container {
     display: flex;
     justify-content: space-between;
     width: 900px;
-    margin: 48px auto 96px;    
+    margin: 48px auto 96px;
 }
 
-#contact .map{
+#contact .map {
     width: 280px;
     height: 160px;
     border-radius: 5px;
@@ -256,26 +291,26 @@ footer .sns{
     margin-right: 32px;
 }
 
-#contact .contact p{
+#contact .contact p {
     margin: 24px 0 26px;
 }
 
-#contact input{
+#contact input {
     width: 100%;
     height: 45px;
     padding-left: 16px;
 }
 
-#contact .frm-input{
+#contact .frm-input {
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
 
-#contact textarea{
+#contact textarea {
     width: 100%;
     /* 텍스트 영역 상자의 크기 조정 불가 */
-    resize:none;
+    resize: none;
     height: 150px;
     margin-top: 10px;
     padding-top: 16px;
@@ -287,14 +322,15 @@ footer .sns{
     padding: 12px 24px;
     margin-top: 10px;
 }
+
 #contact i {
     margin-right: 8px;
 }
+
 #contact .addr i {
     margin-right: 16px;
 }
 
-#contact .frm-btn{
+#contact .frm-btn {
     text-align: right;
 }
-
