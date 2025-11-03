@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js While 문</title>
+</head>
+<body>
+    <script>
+        /* 
+        while문 기본 형식
+            - 조건이 참이면 코드를 반복!
+            - 무한루프
+            while(조건식){
+                코드;
+            }
+        */
+        //1부터 100까지 합
+        let x=1; //1,2,3...100
+        let sum=0; //1+2+3+...+100 누적 합계 변수
+        // 누적 합계
+        // sum=sum + x; x++; -> sum+=x; sum=0 x=1;
+        // 1 = 0 + 1; -> sum=1, x=2
+        // 3 = 1 + 2; -> sum=0+1+2, x=3
+        // 6 = 3 + 3; -> sum=0+1+2+3, x=4 
+
+        while(x<=77){
+            sum=sum+x;
+            x++;
+        }
+        document.write( '1부터 100까지의 합은:' +sum+ '<br>' )
+
+        x=0;
+        sum=0;
+
+        while(1){
+            // 무한반복
+            // true, 0이 아닌수
+            // false, 0, -0, 0n(BigInt, 큰정수), '',(빈문자열), null, undefined, NaN(not a number)
+            console.log('무한반복');   
+            // 무한 반복 해결?
+            sum=sum+x;
+            x++;
+            if(x===10001) break;  
+        }
+          document.write( '1부터 10000까지의 합은:' +sum+ '<br>' )
+
+    </script>
+</body>
+</html>
