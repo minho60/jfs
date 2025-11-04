@@ -57,6 +57,13 @@ a {
     text-decoration: none;
 }
 
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+
 iframe {
     width: 100%;
     height: 100%;
@@ -115,6 +122,12 @@ footer .sns i {
     font-size: 2.4rem;
     margin: 0 -3px;
 }
+
+#contact h2{
+    color:#ffffff;
+    font-size: 40px;
+}
+
 
 #contact h3,
 p {
@@ -188,7 +201,7 @@ h2 {
 
 }
 
-circle_ani:hover {
+.circle_ani:hover {
     transform: rotate(360deg);
     /* trfr */
     /* 기본값 */
@@ -250,26 +263,61 @@ footer .sns {
 /* section area: index.html */
 
 #home {
+    position: relative;
+    overflow: hidden;
     height: 100vh;
+    width: 100%;
     background: url(../assets/img/ivan-bandura-2FEE6BR343k-unsplash.jpg) no-repeat 50% 50%/cover fixed;
 }
 
+/* work+contact section area: work.html */
+
+ .parallax-bg {
+    position: relative;
+    background: no-repeat 50% 50%/cover fixed;
+    height: 400px;
+}
+ .container {
+    width: 900px;
+    margin: 48px auto 96px;
+    text-align: center;
+}
+
+button {
+    padding: 12px 24px;
+    margin-top: 10px;
+}
+
+
+/* work section area: work.html */
+
+#work .parallax-bg{
+background-image: url(/jfs/assets/img/parallax2.jpg);
+}
+
+#work .portfolio {
+    display: flex;
+}
+
+#work .portfolio li{
+    width: 216px;
+    height: 162px;
+
+}
+
+
+
 /* section area contact.html */
+#contact .parallax-bg{
+background-image: url(/jfs/assets/img/parallax3.jpg);
+}
+
 
 #contact h3,
 p {
     text-align: center;
 }
 
-#contact .contact {
-    width: 600px;
-}
-
-#contact .parallax-bg {
-    position: relative;
-    background: url(../assets/img/parallax3.jpg) no-repeat 50% 50%/cover fixed;
-    height: 400px;
-}
 
 #contact .parallax-bg h2 {
     background: transparent;
@@ -279,8 +327,6 @@ p {
 #contact .container {
     display: flex;
     justify-content: space-between;
-    width: 900px;
-    margin: 48px auto 96px;
 }
 
 #contact .map {
@@ -290,6 +336,11 @@ p {
     overflow: hidden;
     margin-right: 32px;
 }
+
+#contact .contact {
+    width: 600px;
+}
+
 
 #contact .contact p {
     margin: 24px 0 26px;
@@ -319,8 +370,6 @@ p {
 
 #contact button {
     background: #111;
-    padding: 12px 24px;
-    margin-top: 10px;
 }
 
 #contact i {

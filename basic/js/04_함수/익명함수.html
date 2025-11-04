@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js 익명 함수</title>
+</head>
+
+<body>
+    <button type="button" onclick="printMsg2('노앰이', 30)">누르세요</button>
+
+
+    <script>
+
+        /* 
+            함수(function) 작성
+                - {제어문}과 마찬가지로 {함수} 선언문 끝에도 ;를 쓰지 않는다.
+                - 이름 지정 방법은 변수와 같다.
+
+                1) 함수 선언
+                    function [함수명]([매개변수1, 매개변수2, ...]){
+                        실행문장;
+                        [return 반환값;]
+                    }
+
+                    매개변수(parameter): 변수
+                    인자(argument): 값    
+
+                2) 익명(무명) 함수 선언
+                    var 변수명 = function(매개변수1, 매개변수2, ...){
+                        코드;
+                    }
+
+                3) 함수 호출
+                    함수명(인자1, 인자2, ...);
+
+                함수는 왜?
+                    반복 코드를 재사용    
+        
+        */
+
+        // 매개변수가 없는 함수
+        //호이스팅은 자바스크립트가 실행 전에 변수 선언(과 함수 선언)을 해당 스코프의 최상단으로 끌어올리는 것처럼 동작하는 현상입니다.
+
+        fn(); // 호이스팅 (Hoisting)
+        function fn() {
+            document.write('함수 입니다.<br>');
+        }
+        fn(); fn();
+
+        const txt1 = '함수 선언 전 호출';
+        const txt2 = '함수 선언 후 호출';
+
+        // printMsg(txt1); //호이스팅 ❌            
+        
+        // 이름이 같으면 아래 함수가 호출된다.
+        // 익명 함수 선언
+        // const 변수명 = function([매개변수,...]){코드;}
+        
+        // 익명함수
+        var printMsg = function (msg) {
+            document.write('익명 함수'+ msg + '<br>');
+        }
+
+        // 선언적 함수
+        function printMsg(msg) {
+            document.write('선언적 함수'+msg + '<br>');
+        }
+
+      // 함수 호출
+
+      printMsg();
+
+
+    </script>
+</body>
+
+</html>
