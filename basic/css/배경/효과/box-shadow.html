@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow</title>
+    <style>
+        /* 
+            emmet: ts
+            box-shadow: x위치 y위치 [흐림] [퍼짐] [색] [inset];
+            box-shadow: 0 0 0 글자색; 기본값
+        */
+
+        img {
+            width: 100%;
+            height: 100%;
+            /*  */
+
+            object-fit: cover;
+            /* object-fit: contain; */
+        }
+
+        p {
+            width: 500px;
+            height: 100px;
+            margin: 50px;
+            background-color: coral;
+        }
+
+
+        .p1 {
+            box-shadow: 2px 2px 5px red;
+            /* ts */
+        }
+
+        .p2 {
+            box-shadow: 10px 10px 5px lightblue inset;
+        }
+
+        .p3 {
+            box-shadow: 10px 10px 5px lightblue;
+        }
+
+
+        /* 멀티플 */
+
+        .p4 {
+            box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+        }
+
+        p:has(button) {
+            background: transparent;
+        }
+
+        button.p4 {
+            width: 200px;
+            height: 50px;
+            background: inherit;
+            color: black;
+            box-shadow: none;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            transition: all 200ms ease-out;
+        }
+        button.p4:hover {
+           box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <p class="p1"> box-shadow: 2px 2px;</p>
+    <p class="p2"> box-shadow: 2px 2px;</p>
+    <p class="p3"> box-shadow: 2px 2px;</p>
+    <p class="p4"><img src=" https://www.w3schools.com/css/rock600x400.jpg" alt="이미지박스그림자"></p>
+
+    <button class="p4">더보기</button>
+
+
+
+</body>
+
+</html>
