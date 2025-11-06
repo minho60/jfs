@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS overflow 속성</title>
+    <style>
+        /* 
+            overflow 속성
+            1) visible 
+                - 기본값입니다. 오버플로는 잘리지 않습니다. 콘텐츠는 요소의 상자 밖으로 렌더링됩니다.
+            2) hidden 
+                - 오버플로는 잘리고 나머지 콘텐츠는 숨겨집니다.
+            3) scroll
+                 - 스크롤바가 추가되었습니다.
+                 - 사용자는 모든 콘텐츠를 보려면 스크롤해야 합니다.
+            4) auto 
+                - scroll과 유사 하지만 
+                - 콘텐츠가 박스보다 많아 넘치면 스크롤바가 생성되고 아니면 스크롤 바를 숨긴다.
+            5) clip
+                -  
+        */
+
+        #wrap {
+            display: flex;
+            gap: 30px;
+        }
+
+        #wrap div {
+            width: 300px;
+            height: 150px;
+            background-color: coral;
+        }
+
+        .div1 {
+            overflow: visible;
+            /* o:v 기본값 */
+        }
+
+        .div2 {
+            overflow: hidden;
+            /* o */
+        }
+
+        .div3 {
+            overflow: scroll;
+            /* o:s */
+        }
+
+        .div4 {
+            overflow: auto;
+            /* o:a */
+        }
+
+        .div5 {
+            overflow: clip;
+        }
+
+        .div6 {
+            overflow: scroll;
+        }
+
+        .div7 {
+            overflow: auto;
+        }
+
+        .div8 {
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+
+        .div9 {
+            overflow: scroll;
+            overflow-y: hidden ;
+            white-space: nowrap;
+           
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <div class="div1">visible Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laboriosam suscipit
+            dolore ea reiciendis tenetur vero voluptatem quo officia neque adipisci culpa, minus itaque mollitia
+            incidunt nulla atque facere aliquam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut veniam quaerat fugiat, natus possimus sed vitae
+            aperiam qui ex vel nisi, mollitia doloremque asperiores distinctio tempore blanditiis quas! Ad, aperiam.
+        </div>
+        <div class="div2">hidden Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, dolorem ipsam?
+            Explicabo itaque doloribus delectus repellendus inventore accusamus aliquam sit cumque perspiciatis
+            blanditiis odio eligendi, possimus ut, qui non. Eligendi?Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Rem reprehenderit molestiae inventore unde, minus cupiditate deserunt ab iusto qui harum
+            necessitatibus commodi sequi quis voluptate quibusdam dolorum. Consectetur, aliquid at.</div>
+        <div class="div3">scroll Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus id, saepe iste
+            harum labore enim eos cum hic rerum assumenda temporibus animi iure voluptatibus ducimus debitis dolorem?
+            Iusto, doloribus dolorem! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore facilis ipsum,
+            molestias porro, velit qui voluptatum in mollitia saepe nesciunt iusto, recusandae perferendis hic esse sunt
+            veritatis sequi natus id!</div>
+        <div class="div4">Auto Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda et quisquam molestiae
+            minima facere, eaque omnis numquam magni. Aspernatur voluptatem tempore aliquid! Officia numquam quia
+            sapiente ipsam saepe doloribus blanditiis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
+            consectetur, officia laborum, pariatur ducimus itaque animi quod neque voluptatem expedita iure. Accusamus
+            sunt autem harum quis cum in officia accusantium.</div>
+        <div class="div5">clip Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum eos, perspiciatis
+            temporibus velit doloribus odio itaque deserunt sequi saepe corrupti, sit tempore! Explicabo labore
+            exercitationem tenetur aut placeat consectetur veritatis. Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Illum sunt voluptatum sit, quibusdam quis dolor suscipit accusamus nobis iusto, a
+            recusandae, commodi iure quasi perspiciatis! Aliquid ducimus sed sapiente iure.</div>
+        <div class="div6">clip Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum eos, perspiciatis
+            temporibus velit dolore
+        </div>
+        <div class="div7">clip Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum eos, perspiciatis
+        </div>
+        <div class="div8">clip Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum eos, perspiciatis
+        </div>
+        <div class="div9">clip Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum eos, perspiciatis
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

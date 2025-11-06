@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js 배열 접근 조작</title>
+</head>
+
+<body>
+    <!-- 버튼 클릭시 addFn()을 호출 한다. -->
+    <button type="button" onclick="addFn()">1부터 100까지 합</button>
+    <script>
+        /* 
+            배열 테이터의 접근 /조작
+        
+        */
+        // 1~100까지 합
+        // 빈 배열 생성
+        const nums = [];
+        // 배열 요소 추가 1 부터 100까지 숫자 데이터
+        // 배열명[인덱스] = 값;
+        function insertFn() {
+            for (let i = 0; i < 100; i++) {
+                nums[i] = i + 1;
+            }
+        }
+        // 조회
+        function selectFn(){
+            insertFn()
+            document.write(nums+'<br>');
+        }
+    
+        function addFn() {
+            selectFn();
+            let sum = 0;
+            for (let i = 0; i <= 100; i++) {
+                sum += i;
+            }
+            document.write(sum +'<br>');
+            document.write('<br> <a href="배열접근조작.html">새로고침</a>')
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

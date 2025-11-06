@@ -340,6 +340,21 @@ p {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
+/* section area about.html */
+#about .basic p{
+    text-align: left;
+}
+#about .basic .inner{
+    display: flex;
+
+}
+#about .basic .inner div{
+    flex: 50%;
+}
+#about .basic .inner p{
+    flex:50%;
+}
+
 
 /* section area contact.html */
 #contact .parallax-bg {

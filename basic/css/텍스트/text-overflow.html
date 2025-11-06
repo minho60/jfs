@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS text-overflow</title>
+
+    <style>
+        /* 
+            text-overflow
+                - 표시되지 않는 오버플로된 콘텐츠를 사용자에게 어떻게 표시할지 지정합니다. 잘라내거나, 생략 부호(...)를 표시하거나, 사용자 지정 문자열을 표시할 수 있습니다.
+        
+        */
+        div.a{
+            width: 300px;
+            height: 30px;
+            border: 1px solid #000;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        div.a:hover{
+            /* overflow: visible; */
+            text-overflow: clip;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="a">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias aut quidem beatae nostrum voluptatem placeat autem iste. Vitae nesciunt autem placeat natus non cupiditate voluptatibus, impedit iste optio? In, ullam.</div>
+
+</body>
+
+</html>

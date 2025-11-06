@@ -4,19 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>linear gradients</title>
+    <title>conic gradients</title>
     <style>
+        /* https://cssgradient.io/ */
         /* 
-            radial- gradients() 함수
+           conic- gradients() 함수
 
             background-image: conic-gradient([from 각도] [at 위치,] 색 [degree], 색 [degree], ...);
                 모양
-                    -ellipse(타원, 기본값), circle(원)
-                    farthest-corner: 코너에서 가장 먼 (기본 값)
-                    closest-corner: 코너에서 가장 가까운
-                    closest-side: 사이드에서 가장 가짜운
-                    farthest-side: 사이드에서 가장 먼
-              
+                    - from 각도: 색의 시작 기준, 0deg(기본값)
+                    - at x위치 y위치: 중심점 위치, 기본값은 50%, 50%
+                    - 색 뒤에 deg는 색의 분포
         */
         p {
             width: 500px;
@@ -26,31 +24,41 @@
 
         #grad1 {
             /* top to bottom(위에서 아래): 색1에서 색2 */
-            background-image: radial-gradient(red, yellow, green);
+            background-image: conic-gradient(red, yellow, green);
         }
 
         #grad2 {
-            background-image: radial-gradient(circle, red 5%, yellow 15%, green 60%);
+            background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
         }
 
         #grad3 {
-            background-image: radial-gradient(closest-side at 70% 60%, red, yellow, black);
+            background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+
         }
 
         #grad4 {
-            background-image: radial-gradient(farthest-side at 70% 60%, red, yellow, black);
+            background-image: conic-gradient(from 90deg, red, yellow, green);
         }
 
         #grad5 {
-            background-image: radial-gradient(closest-corner at 70% 60%, red, yellow, black);
+            background-image: conic-gradient(at 70% 30%, red, yellow, green);
         }
 
         #grad6 {
-            background-image: radial-gradient(farthest-corner at 70% 60%, red, yellow, black);
+            background-image: repeating-conic-gradient(red 10%, yellow 20%);
         }
+
         #grad7 {
-            background-image: radial-gradient(farthest-corner at 70% 60%, red, yellow, black);
+            background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
         }
+
+        /* https://cssgradient.io/   */
+        #grad8 {
+            background: #020024;
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        }
+        /* chat gpt */
+        #grad9{}
 
     </style>
 </head>
@@ -58,12 +66,15 @@
 <body>
 
     <p id="grad1"></p>
-    <p id="grad2">background-image: linear-gradient(to top, red, yellow); </p>
-    <p id="grad3">background-image: linear-gradient(to top, red, yellow); </p>
-    <p id="grad4">background-image: linear-gradient(to top, red, yellow); </p>
-    <p id="grad5">background-image: linear-gradient(to top, red, yellow); </p>
-    <p id="grad6">background-image: linear-gradient(to top, red, yellow); </p>
-    <p id="grad7">background-image: linear-gradient(to top, red, yellow); </p>
+    <p id="grad2">conic-gradients </p>
+    <p id="grad3">conic-gradients </p>
+    <p id="grad4">conic-gradients </p>
+    <p id="grad5">conic-gradients </p>
+    <p id="grad6">conic-gradients </p>
+    <p id="grad7">conic-gradients </p>
+    <p id="grad8">conic-gradients </p>
+    <p id="grad8">conic-gradients </p>
+    <p id="grad9">conic-gradients </p>
 
 </body>
 
