@@ -26,21 +26,22 @@
             }
         }
         // 조회
-        function selectFn(){
-            insertFn()
-            document.write(nums+'<br>');
+        function selectFn() {
+            insertFn();
+            //1~100까지 숫자를 출력
+            document.write(nums + ' ');
         }
-    
+
         function addFn() {
             selectFn();
             let sum = 0;
             for (let i = 0; i <= 100; i++) {
                 sum += i;
             }
-            document.write(sum +'<br>');
+            document.write(`1부터 100까지의 합은${sum} 입니다<br>`);
             document.write('<br> <a href="배열접근조작.html">새로고침</a>')
         }
-
+        addFn();
 
 
 

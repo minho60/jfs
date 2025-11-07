@@ -184,7 +184,7 @@ h2 {
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
-h3{
+h3 {
     text-align: center;
     margin: 64px 0 10px;
 }
@@ -324,7 +324,7 @@ p {
 }
 
 
-#shadow{
+#shadow {
     margin: 64px 0 0;
     width: 200px;
     height: 50px;
@@ -341,19 +341,98 @@ p {
 }
 
 /* section area about.html */
-#about .basic p{
-    text-align: left;
-}
-#about .basic .inner{
-    display: flex;
 
+#about .basic p {
+    text-align: left;    
 }
-#about .basic .inner div{
+#about .basic strong{
+    text-decoration: underline 2px wavy red;
+}
+
+#about .basic b{
+    display: inline-block;
+    padding-bottom: 36px; 
+}
+
+
+#about .basic img{
+    filter:opacity(50%);
+    height: 280px;
+    border-radius: 5px;
+}
+#about .basic img:hover{
+    filter:none;
+}
+
+
+#about .basic .inner {
+    display: flex;
+    gap: 48px;
+    margin: 48px 0 130px;
+}
+
+#about .basic .inner div {
     flex: 50%;
 }
-#about .basic .inner p{
-    flex:50%;
+
+#about .basic .inner p {
+    flex: 50%;
 }
+
+/* skill */
+#about .skill>p{
+    margin-bottom: 36px;
+    font-size: 1.8rem;
+}
+
+#about .skill .inner p {
+    text-align: left;
+    letter-spacing: 16px;
+    margin: 12px 0;
+}
+
+
+#about .skill .progressbar {
+    background: #F1F1F1;
+}
+
+#about .progressbar div {
+    /* 한줄 텍스트의 경우 height와 line-height가 같을 경우 수직 중앙 배치 */
+    /* line-height: 35px;
+    height: 35px; */
+    padding: 6px;
+    background: #616161;
+}
+
+#about .progressbar:nth-of-type(1) div {
+    width: 70%;
+
+}
+
+#about .progressbar:nth-of-type(2) div {
+    width: 70%;
+
+}
+
+/* count */
+
+
+#about .count ul {
+    display: flex;
+    text-align: center;
+    padding: 36px 0;
+    background: #616161;
+    color: #fff;
+}
+#about .count ul li{
+    /* flex:[grow|shrink|basis]; */
+    flex: 0 1 25%;
+}
+#about .count ul li span{
+    display: block;
+   font-size: 2.4rem;
+}
+
 
 
 /* section area contact.html */
