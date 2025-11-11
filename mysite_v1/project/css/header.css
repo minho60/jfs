@@ -1,0 +1,120 @@
+@charset "utf-8";
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+
+/* 헤더 */
+#header {
+    position: fixed;
+    /* 포지션이static인 요소보다 위에 배치  */
+    /* 포지션이 static이 아닌 요소들은 z-index의 숫자가 클수록 위로배치 */
+    z-index: 1000;
+    width: 100%;
+    background: #0F2244;
+    overflow: hidden;
+}
+
+#header::after {
+    content: '';
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 0;
+    background: #fff;
+    transition: 2s;
+}
+
+#header:hover::after {
+    height: 200px;
+}
+
+#header a {
+    color: #fff;
+}
+
+#header .container {
+    padding: 0 50px;
+    position: relative;
+    height: 95px;
+    display: flex;
+    justify-content: space-between;
+    /* background: green; */
+    align-items: center;
+}
+
+/* 로고 */
+/* 글로벌 내비게이션 바(GNB) */
+#gnb {
+    align-self: flex-start;
+    position: absolute;
+    left: 50%;
+    top: 32px;
+    transform: translateX(-50%);
+    /* background: red; */
+}
+
+/* 1depth: main menu */
+#header .main {
+    display: flex;
+    width: 600px;
+    /* background: lightpink; */
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+#header .main>li {
+    width: 150px;
+}
+
+#header .main>li>a {
+    display: inline-block;
+}
+
+#header .main>li>a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #bbb;
+    text-align: center;
+    /* margin: auto; */
+    transform: scaleX(0);
+    /* transform-origin: x축기준 y축기준; */
+    /* transform-origin: 50% 50%; 기본값 */
+    /* transform-origin: 0% 50%; */
+    transform-origin: right;
+    transition: transform .3s;
+}
+
+/* 메인메뉴 하단바 */
+
+#header .main>li>a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    /* width: 100%; */
+}
+
+#header .main a:hover {
+    color: #bbb;
+}
+
+/* 메인 메뉴에 :hover 시 서버 메뉴 나타내기 */
+/* .main:hover .sub{
+            visibility: visible;
+            opacity: 1;
+            transition: 1s;
+        } */
+
+/* 2depth:submenu */
+#header .sub {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-top: 50px;
+    line-height: 2;
+
+}
+
+#header .sub a {
+    color: #333;
+}
+
+/* SNS,로그인, 회원가입 */

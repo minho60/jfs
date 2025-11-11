@@ -257,7 +257,7 @@
         document.write(`새 배열: ${result} <br>` );
 
         document.write(` indexOf()/ lastIndexOf()----------------------------<br>`);
-
+        datas=[1,2,3,4,5,3,7,8,3,10]
         // indexOf(val, [fromidx])
         // - val에 대한 인덱스 반환, 앞에서 부터
         // - fromidx: 검색을 시작할 인덱스
@@ -266,10 +266,12 @@
 
         //왼쪽에서 첫 번째로 찾은 3의 인덱스를 반환
         document.write( '인덱스: '+datas.indexOf(3)+'<br>'); // 인덱스: 2
-        // 숫자 3중에서 왼쪽부터 2번째 3의 인덱스를 반환
-        document.write( '인덱스: '+datas.indexOf(3,2)+'<br>');
+        // 2번 인덱스 부터 끝방향으로 3을 찾아 인덱스를 반환
+        document.write( '인덱스: '+datas.indexOf(3,3)+'<br>');
+        // 끝에서 첫 번쨰로 찾은 3의 인덱스를 반환
         document.write( '인덱스: '+datas.lastIndexOf(3)+'<br>');
-        document.write( '인덱스: '+datas.lastIndexOf(3,5)+'<br>');
+        // 3번째 인덱스부터 시작방향으로 3을 찾아 인덱스를 반환
+        document.write( '인덱스: '+datas.lastIndexOf(3,3)+'<br>');
 
     </script>
 </body>

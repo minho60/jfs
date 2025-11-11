@@ -72,6 +72,7 @@ iframe {
 button {
     border: none;
     cursor: pointer;
+    color:beige;
 }
 
 button:hover {
@@ -177,8 +178,10 @@ h2 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: white;
     /* trft */
-    background: #404040;
+    /* background: #404040; */
     /* 일반적으로 좌우패칭을 상하 보다 더 준다. */
     padding: 8px 24px 10px 30px;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
@@ -305,7 +308,7 @@ button {
 /* work section area: work.html */
 
 #work .parallax-bg {
-    background-image: url(/jfs/assets/img/parallax2.jpg);
+    background-image: url(/jfs/assets/img/portfolio.jpg);
 }
 
 #work h3,
@@ -341,6 +344,9 @@ p {
 }
 
 /* section area about.html */
+#about .parallax-bg{
+    background: url(/jfs/assets/img/damian-ochrymowicz-uxnonl5ctUs-unsplash.jpg) no-repeat 50% 40%/cover
+}
 
 #about .basic p {
     text-align: left;    
@@ -437,7 +443,8 @@ p {
 
 /* section area contact.html */
 #contact .parallax-bg {
-    background-image: url(/jfs/assets/img/parallax3.jpg);
+    background-image: url(/jfs/assets/img/markus-winkler-GTJNxRG4QJw-unsplash.jpg);
+    background-position: 50% 15%;
 }
 
 
@@ -467,6 +474,7 @@ p {
 
 #contact .contact {
     width: 600px;
+    text-align: left;
 }
 
 
