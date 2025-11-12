@@ -8,8 +8,11 @@
 </head>
 
 <body>
-    <p id="var1"></p>
-    <p id="var2"></p>
+    <p id="var1">아이디1:getElementById</p>
+    <p id="var2">아이디2:</p>
+    <p class="var3">p.ver3</p>
+    <p class="var3">p.var4</p>
+    <p >p태그</p>
     <script>
         /* 
             객체
@@ -27,18 +30,44 @@
                 }
         
         */
-        const car = { name: '소나타', speed: 100, color: 'white' }
-        // getElementById()
-        // - 문서의 id를 가진 요소를 가저온다(선택)
-        // - CSS의 선택자 역할
-
+       //객체 내에서 사용한 this는 객체 자신을 가르킨다.
+        const car = { 
+            name: '소나타',
+            speed: 100, 
+            color: 'white' , 
+            start:function (){
+                return `${this.name}가 출발합니다.`
+            },
+            stop:function(a){return `속도가 100에서 ${a}로 줄었습니다.`},
+            accel:function(a,b){return `속도가 ${a}에서 ${b}로 가속되었습니다.`},  
+        }
+        
         // innerHTML 속성: HTML의 요소에 내용 지정
         // - HTML의 요소에 내용 지정 (set)/ 가져오기(get)
         // - HTML 태그인식 ⭕
         // textContent 속성: HTML의 요소에 내용 지정
         // - HTML의 요소에 내용 지정(set)/ 가져오기(get)
         // - HTML 태그인식❌
-        document.getElementById('var1');
+        
+        
+        
+        
+        // getElementById()
+        // - 문서의 id를 가진 요소를 가저온다(선택)
+        // - CSS의 선택자 역할
+        // 단일 선택
+        // const 변수명=document.getElementById('아이디');
+        // const 변수명=document.querySelector('CSS선택자');
+        // 다중선택
+        // const 변수명=document.getElementsByClassName('클래스명')[인덱스];
+        // const 변수명=document.getElementsByTagName('태그명').item(인덱스);
+        // const 변수명=document.querySelectorAll('CSS선택자')[인덱스];
+        const var1 = document.getElementById('var1');
+        const var2 = document.querySelector('#var2');
+
+        const var3 = document.getElementsByClassName('var3')[0];
+        const var4 = document.querySelectorAll('.var3').item(1);
+        const var5 = document.getElementsByTagName('p')[4];
 
         //p 태그 내용 가져오기 
         // 객체.innerHTML;(getter)
@@ -47,9 +76,13 @@
         var1.innerHTML = ` <b> ${car.name}</b> 입니다.`;
 
         // 객체. textContent;(getter)
-        console.log(var1.textContent);
+        console.log(var2.textContent);
         // 객체.textContent = 값;(setter)
-        var1.textContent = ` <b> ${car.name}</b> 입니다.`;
+        var2.textContent = ` <b> ${car.name}</b> 입니다.`;
+
+        var3.innerHTML = car.start();
+        var4.innerHTML = car.stop(0);
+        var5.innerHTML = car.accel(0,100);
 
     </script>
 </body>
