@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위치이동</title>
+    <style>
+        /*
+        transform: 값 값 값 ...;
+            translate(x,y)      x. y위치 이동
+            translateX(x)        x위치 이동 (좌우)
+            translateY(y)        y위치 이동 (상하)
+            rotate()            회전    
+            scaleX()            크기    
+            scaleY()
+            scale()
+            skewX()             기울기
+            skewY()
+            skew()
+            matrix()            혼합
+     */
+
+        .outer {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background: lightgreen;
+            
+        }
+
+        .inner {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 100px;
+            height: 40px;
+            border-radius: 50px;
+            background-color: lightcoral;
+            /* transform: translate(x위치, y위치); */
+            transform: translate(-50%, 0px);
+
+            opacity: 0;
+            transition: 1s;
+
+        }
+
+        .outer:hover .inner {
+            transform: translate(-50%, -30px);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="outer">
+        <div class="inner">위치이동</div>
+    </div>
+
+
+</body>
+
+</html>

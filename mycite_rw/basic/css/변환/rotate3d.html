@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변환:3D rotate</title>
+    <style>
+        .parent {
+            perspective: 800px;
+            border: 1px solid #000;
+        }
+
+        .parent div {
+            width: 100px;
+            height: 100px;
+            background: palevioletred;
+            margin: 50px;
+            transition: .3s;
+            border-radius: 50%;
+        }
+
+
+        /* 3D의 경우 perspective(원근감)을 부모요소에 지정한다. */
+        .parent:hover .box1 {
+            /* x축: 수평축 기준 회전 */
+            transform: rotateX(180deg);  /* trfrx */
+        }
+
+        .parent:hover .box2 {
+            /* y축: 수직축 회전 기준 */
+            transform: rotateY(180deg); /* trfry */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box1">rotateX</div>
+    </div>
+
+    <div class="parent">
+        <div class="box2">rotateY</div>
+    </div>
+
+</body>
+
+</html>

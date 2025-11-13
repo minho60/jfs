@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="eko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자2</title>
+    <style>
+       /* 
+            1. 하위(자식+손자) 선택자
+                기호는 공백(한 칸 띄어쓰기)
+                선택자1 선택자2
+                부모요소 하위요소
+                예) body h1(o) 
+                예) h1 body(x)
+                예) body li(o)
+                예) Ul .li(o) (클래스 이름을 li로 설정했을 시 ul 안에 li 클래스)
+                예) ul * (o)
+                예) body #li
+                예) body ul li h2 (o)
+            2. 자식 선택자
+                기호는 >
+                선택자1 > 선택자2
+                부모 > 자식(손자 불가)
+                예) body > h1(o) 
+                예) h1 > body(x)
+                예) body > li(x)
+                예) body> ul >li> p(o)
+            3. 복합(compound) 선택자
+                예) ul.li(o)
+            1,2,3은 클래스 선택자로 대신 작업 가능.
+
+       */
+        ul h2 {border: 1px solid red;}
+        /* .descendant {border: 1px solid red;} */
+        li > p {border:2px dashed blue;}
+        /* li 태그 중에 li 클래스를 가진 요소 */
+        li.li {border: 3px dotted green;}
+        /* li태그의 하위 요소 중에서 li클래스를 가진 요소 */
+        li p .li {border: 3px double plum;}
+    </style>
+</head>
+<body>
+    <h1>CSS 선택자2</h1>
+    <h2>두 개 이상의 선택자를 활용한 선택자</h2>
+    <ul>
+        <li>
+            <h2 class="descendant">하위 선택자</h2>
+            <p class="li">하위 선택자란 공백을 사용하여 두 개의 선택자를 사용한 선택자를 말한다.</p>
+        </li>
+        <li >자식 선택자</li>
+        <li class="li">복합 선택자</li>
+        <li>가상 클래스 선택자</li>
+        <li>가상 요소 선택자</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        /* 
+        애니메이션 코드 (필수)
+        @keyframes 애니메이션 이름{
+            from{ CSS속성: 값;}
+            to{CSS속성: 값;}
+        }
+
+
+        @keyframes 애니메이션 이름{
+            0%{CSS속성: 값;}
+            100%{}
+
+        }
+        
+        */
+        @keyframes myAnimation {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: yellow;
+            }
+        }
+
+        /* 
+            애니메이션을 적용시킬 요소
+                animation-name: (필수)
+                animation-duration: (필수)
+                animation-timing-function
+                animation-delay
+                animation-iteration-count:1; (기본값)
+                animation-direction
+                animation-fill-mode
+                    from-> to-> 초기값
+                    to 에서 멈춤: forwards;
+                animation-play-stateS
+        */
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: myAnimation;
+            animation-duration: 4s;
+            /* animation-iteration-count: infinite; 무한반복 */
+            animation-fill-mode: forwards; /* to에서 멈춤 */
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+<div>
+    Animation
+</div>
+
+</body>
+
+</html>

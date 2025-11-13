@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수로 객체 사용</title>
+</head>
+
+<body>
+
+    <h2>[Hong's Car]</h2>
+    <p>자동차 이름: <span>name</span></p>
+    <p>자동차 속도: <span>speed</span></p>
+    <p>자동차 색상: <span>color</span></p>
+
+    <h2>[Kim's Car]</h2>
+    <p>자동차 이름: <span>name</span></p>
+    <p>자동차 속도: <span>speed</span></p>
+    <p>자동차 색상: <span>color</span></p>
+    <p>price <span>price</span></p>
+
+
+    <script>
+        /* 
+            사용자 정의 생성자 함수로 객체 생성하기
+        */
+
+        function Car(name, speed, color) {
+            this.name = name;
+            this.speed = speed;
+            this.color = color;
+            this.speedup = function () {
+                return this.speed += 10;
+            }
+            this.speeddown = function () {
+                return this.speed -= 10;
+            }
+        }
+
+        // Car생성자 함수로 객체 생성
+        const hongcar = new Car('sonata', 120, 'red');
+        const kimcar = new Car('bmw', 140, 'blue');
+
+        //DOM 객체 선택
+        const carName = document.querySelector('p:nth-of-type(1) span')
+        const carSpeed = document.querySelector('p:nth-of-type(2) span')
+        const carColor = document.querySelector('p:nth-of-type(3) span')
+
+        const carName2 = document.querySelector('p:nth-of-type(4) span')
+        const carSpeed2 = document.querySelector('p:nth-of-type(5) span')
+        const carColor2 = document.querySelector('p:nth-of-type(6) span')
+        const carPrice2 = document.querySelector('p:nth-of-type(7) span')
+
+        //DOM 객체에 내용지정 (갱신, update)
+        carName.textContent = hongcar.name;
+        carSpeed.textContent = hongcar.speed;
+        carColor.textContent = hongcar.color;
+        carSpeed.textContent = hongcar.speedup();
+        carSpeed.textContent = hongcar.speedup();
+        carSpeed.textContent = hongcar.speedup();
+        carSpeed.textContent = hongcar.speedup();
+       
+        carName2.textContent = kimcar.name;
+        carSpeed2.textContent = kimcar.speed;
+        carColor2.textContent = kimcar.color;
+        carSpeed2.textContent = kimcar.speedup();
+        carSpeed2.textContent = kimcar.speedup();
+        carSpeed2.textContent = kimcar.speedup();
+        carSpeed2.textContent = kimcar.speedup();
+
+        // 객체의 속성 삭제 
+        // delete 객체.속성명
+        delete kimcar.color;
+
+        // 객체의 속성 추가
+        // 객체.속성명 = 값;
+        kimcar.price = '3천만원';
+
+        // 객체의 속성 확인
+         carColor2.textContent = kimcar.color;
+         carPrice2.textContent = kimcar.price;
+
+
+  
+    </script>
+
+
+</body>
+
+</html>

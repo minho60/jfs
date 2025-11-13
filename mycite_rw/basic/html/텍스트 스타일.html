@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Style</title>
+</head>
+<style>
+    h1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        /* 본문에 기본 글자 크기는 16px */
+        font-size: 2em; /* 엠(em), 부모 글자 크기의 2배= 32px */
+        color:aqua; /* c */
+        font-style: italic; /* fs */
+        font-weight: lighter; /* fwl */
+        text-align: center; /* tac */
+        text-align-last: right; /* tar */
+        text-align-last: left; /* tal */
+
+        /* 속기 속성 */
+        /* font는 속성 값의 순서가 있다. */
+        /* font: [스타일] 크기[/ 줄간격] 글꼴; */
+        font: bold italic 2em/1.5  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';      
+        font: 2em  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode'; 
+        /* font: '글꼴' (x)
+        font: 스타일 크기(x)
+        font: 크기 '글꼴'; (o)
+         */
+        
+    }
+
+    p{
+        font-size: 16px;
+        /* 본문의 줄 간격은 1.5~ 2가 가독성이 좋다. */
+        line-height: 1,5; /* lh1, 글자 크기의 1배 =16px */
+        text-align: justify; /* taj 양쪽 맞춤 */
+        /* 단어 사이가 떨어지는 현상 방지 방법 */
+        word-break: break-all; /* 단어 단위 줄 바꿈이 글자 단위 줄 바꿈으로 바뀐다. */
+        overflow-wrap:break-word;
+
+    }    
+
+
+</style>
+
+<body>
+<h1>Text style</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat impedit inventore veniam accusamus totam minus ullam ea rem expedita quos magnam esse, laudantium officia consequatur velit temporibus assumenda illo fugit?</p>
+    
+
+</body>
+</html>

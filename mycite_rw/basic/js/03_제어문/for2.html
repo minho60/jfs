@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js While 문</title>
+</head>
+<body>
+    <script>
+        /* 
+        while문 기본 형식
+            - 조건이 참이면 코드를 반복!
+            - 무한루프
+            while(조건식){
+                코드;
+            }
+        */
+        //1부터 100까지 합
+        let sum=0; 
+
+        for(let x=1; x<=100; x++){
+            sum=sum+x;
+        }
+        document.write( '1부터 100까지의 합은:' +sum+ '<br>' )
+
+        sum=0;
+
+        for(x=0;1; x++){
+            console.log('무한반복');   
+            // 무한 반복 해결?
+            sum=sum+x;
+            // break는 for문을 탈출
+            if(x===10000) break;  
+        }
+          document.write( '1부터 10000까지의 합은:' +sum+ '<br>' )
+
+    </script>
+</body>
+</html>

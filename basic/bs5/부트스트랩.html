@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 부트스트랩 라이브러리를 CDN으로 연결 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!-- 부트스트랩 프레임워크에서 class 이름을 미리 정의해 놓았다 -->
+ <!-- 부트스트랩은 무엇을 공부하나? 어떤 class 이름들이 있고, class이름 붙히면 어떻게 동작하나 -->
+
+ <!-- 컨테이너 클래스: 
+        container-fluid: 100% 
+        container: 중단점(576이하(xs) 576(sm), 768(md), 992(lg), 1200(xl), 1400(xxl))을 기준으로 최대 크기는 정해져 있다.
+        컨테이너는 row와 col로 나눈다.
+        col-[*]-[*] 최대 12개로 구분
+        
+-->
+
+<!-- 
+    bg-primary, bg-secondary, bg-success, bg-danger, bg-warning, bg-info, bg-light, bg-dark, bg-white, bg-transparent 
+-->
+<div class="container-fluid p-5 bg-danger text-white text-center" style="background: red!important;">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container mt-5" style="background: lightblue;">
+  <div class="row">
+    <div class="col">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

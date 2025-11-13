@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>표: table-layout</title>
+  <style>
+    table {
+      border: 1px solid #000;
+      margin: 50px;
+    }
+
+    td,
+    th {
+      border: 1px solid #000;
+    }
+
+    .table1 {
+      table-layout: auto;
+      width: 180px;
+    }
+
+    .table2 {
+      table-layout: fixed;
+      width: 180px;
+    }
+    .table3 {
+      table-layout: auto; /* 기본값 */
+      width: 100%;
+    }
+
+    td,th{
+      width: 30%;
+    }
+    .table4 {
+      table-layout: fixed;
+      width: 100%;
+    }
+    div{
+      width: 180px;
+      border: 1px solid #000;
+      margin: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>박스크기</div>
+  <table class="table1">
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Island Trading</td>
+      <td>Helen Bennett</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <td>Magazzini Alimentari Riuniti</td>
+      <td>Giovanni Rovelli</td>
+      <td>Italy</td>
+    </tr>
+  </table>
+
+  <table class="table3">
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Island Trading</td>
+      <td>Helen Bennett</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <td>Magazzini Alimentari Riuniti</td>
+      <td>Giovanni Rovelli</td>
+      <td>Italy</td>
+    </tr>
+  </table>
+
+  <table class="table4">
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Island Trading</td>
+      <td>Helen Bennett</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <td>Magazzini Alimentari Riuniti</td>
+      <td>Giovanni Rovelli</td>
+      <td>Italy</td>
+    </tr>
+  </table>
+
+
+</body>
+
+</html>

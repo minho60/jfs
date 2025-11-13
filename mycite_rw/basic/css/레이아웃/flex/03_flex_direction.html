@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css: flexbox</title>
+    <style>
+      .flex-container {
+        display: flex;
+        /* flex-directiond의 기본 값은 row */
+        /* flex-direction: column; */
+        background-color: dodgerblue;
+        /* height: 300px; */
+        /* gap: 10px; */
+        margin: 20px;
+      }
+
+      .flex-container div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      .fx2 {
+        flex-direction: column;
+      }
+      .fx3{
+        flex-direction: row-reverse;
+      }
+
+      .fx4{
+        flex-direction: column-reverse;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="flex-container fx1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+
+    <div class="flex-container fx2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <div class="flex-container fx3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <div class="flex-container fx4">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+
+  </body>
+</html>

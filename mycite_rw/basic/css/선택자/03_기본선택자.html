@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="eko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+    <style>
+        /* 전체선택자 
+            -> * {box-sizing: border-box; margin:0; padding:0;} */
+
+        /* 그룹 선택자 - 속성과 속성 값이 같을 경우 하나로 묶어 적용
+                        형식: 선택자, 선택자, ...
+        */
+        html, body, h1, ul, li {border: 1px solid black;}
+        body { border: 1px solid black;} 
+        h1 { border: 1px solid black;} 
+        ul {border: 1px solid red;}
+       /* 태그 선택자 */
+        li {color:red; border: 1px solid red;} 
+        /* .클래스 선택자 */
+        /* 클래스는 한 페이지에서 중복 사용 가능 */
+        .li {color:rgb(216, 213, 25);}
+        .li2 {color:orange;}
+        /* #아이디(identify) 선택자 */
+        /* 아이디는 한 페이지에서 중복 사용 불가! */
+        /* 아이디/ 클래스 이름 지정 규칙
+            1. 첫 글자에 숫자는 사용 x
+                예) .card1(o)
+                예) .1card(x)
+            2. 특수 문자는 -, _ 만 사용!
+            3. 케밥 케이스 사용 권장(관례상)
+        */
+        #identify {color:blue;}
+        
+    </style>
+</head>
+<body>
+    <h1>CSS 선택자</h1>
+    <ul>
+        <li>태그 선택자</li>
+        <!-- 클래스는 여러개의 값을 가질 수 있다. -->
+         <!-- 아이디는 여러 개의 값을 가질 수 없다. -->
+        <li id="identify">아이디 선택자</li>
+        <li class="li">클래스 선택자</li>
+        <li class="li li2 li3">클래스 선택자 중복</li>
+        <li>그룹 선택자</li>
+        <li>전체 선택자</li>
+    </ul>
+</body>
+</html>

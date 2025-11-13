@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 새로운 객체 생성</title>
+</head>
+
+<body>
+    <p id="var1">아이디</p>
+    <p class="var1">클래스</p>
+    <script>
+        //DOM객체 선택
+        const var1 = document.getElementById('var1');
+        const var2 = document.getElementsByClassName('var1')[0];
+
+        /* 
+        객체 생성
+        1. 리터럴
+        const 객체명 = {}; 
+        2. new 생성자 함수
+        const 객체명 = new Object();
+        
+        참고: 생성자 함수명은 첫 글자를 대문자로(관례)
+        */
+
+        // 리터럴
+        const car = {};
+        car.name = '테슬라';
+        car.speed = 140;
+        car.color = '회색';
+        car.msg = function () { return `내차는 ${this.color} ${this.name} 입니다.` };
+       
+        // 생성자 함수: new Object()
+        const car2 = new Object();
+        car2.name = '아반떼';
+        car2.speed = 120;
+        car2.color = '검은색';
+        car2.msg = function () { return `내차는 ${this.color} ${this.name} 입니다.` };
+
+
+        //DOM 객체의 내용 수정 (Update)
+        var1.innerHTML = car.name;
+        var2.innerHTML = car.msg();
+       
+    </script>
+</body>
+
+</html>

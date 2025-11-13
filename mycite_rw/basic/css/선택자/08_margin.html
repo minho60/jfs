@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 박스모델</title>
+    <style>
+        /* 
+            margin: 여백;
+
+            margin-top -
+            margin-right - 
+            margin-bottom - 
+            margin-left - 
+        */
+       
+        div {
+            /* 개별 속셩 */
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 150px;
+            margin-left: 150px;
+            /* 속기 속성(Shorthand Property) */
+            /* maergin: 상 우 하 좌 */
+            maergin: 100px 150px 100px 150px;
+            /* margin: 상하 좌우 */
+            margin: 100px 150px;
+            /* margin: 상 좌우 하 */
+            margin: 100px 150px 80px;
+            /* margin: 상하좌우 */
+            /* margin: 150px */
+            /* margin 참고: 음수 지정 가능 */
+             background-color: violet; 
+             border: 1px solid #000;
+        }
+        
+        p {
+            line-height: 1;
+            /* em/엠 / 단위는 글자 크기의 배수 */
+            font-size: 100px; /* fz16 */
+            margin: 1em 0; /* 1em= 16px */
+            background-color: violet;
+        }
+
+        .div2 {           
+            /* 위아래 margin 겹칠 경우 큰 쪽으로 지정된다. */
+            margin-top:200px; /* mt200 */
+        }
+        section {
+            /* display: flex; */
+            /* flex-direction: column; */
+            display: flow-root;
+            /* overflow: auto; */
+            /* overflow: hidden; */
+            background-color: orangered;
+        }
+        
+    </style>
+</head>
+
+<body>
+        <section>
+            <div>나는 단락이다.</div>
+            <div class="div2">나는 단락이다.</div>
+        </section>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상하 롤링 텍스트</title>
+    <style>
+        /* reset */
+        body,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .slider {
+            width: 400px;
+            height: 45px;
+            overflow: hidden;
+            margin: 50px auto;
+            border: 2px solid #000;
+        }
+
+
+        .slides {
+            height: calc(100% * 4);
+            animation: slideRoll 9s infinite ease-in-out;
+        }
+
+        @keyframes slideRoll {
+            0% {
+                transform: translateY(0);
+            }
+
+            11.11% {
+                transform: translateY(-25%);
+            }
+
+            33.33% {
+                transform: translateY(-25%);
+            }
+
+            44.44% {
+                transform: translateY(-50%);
+            }
+
+            66.66% {
+                transform: translateY(-50%);
+            }
+
+            77.77% {
+                transform: translateY(-75%);
+            }
+
+            100% {
+                transform: translateY(-75%);
+            }
+
+        }
+
+        .slides li {
+            height: 25%;
+            display: flex;
+            align-items: center;
+            padding-left: 8px;
+
+
+        }
+
+        .slides li span {
+            text-overflow: ellipsis;  /* txo */
+            white-space: nowrap; /* whs, 줄바꿈 ❌ */
+            overflow: hidden; /* ovh, 넘치는 부분 숨기기 */
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="slider">
+        <ul class="slides">
+            <li><span> [속보] 트럼프 "이번에 김정은과 시간 맞추지 못했지만 노력하겠다"</span> </li>
+            <li><span> [속보] 李대통령, 트럼프에 "사용후핵연료 재처리 협의 진척 지시해달라"</span> </li>
+
+            <li><span> [속보] 李대통령, 트럼프에 무궁화대훈장 수여…美대통령 최초</span> </li>
+
+            <!-- 롤링텍스트 -->
+            <li> [속보] 트럼프 "이번에 김정은과 시간 맞추지 못했지만 노력하겠다" </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

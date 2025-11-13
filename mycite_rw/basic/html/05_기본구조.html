@@ -1,0 +1,82 @@
+<!-- !탭 -->
+<!DOCTYPE html>
+<!--HTML의 문서의 시작, 언어 선택 
+    한국: ko
+    영어: en
+    중국: Zh
+    일본: ja
+    -->
+<html lang="ko">
+    <!-- 헤드 시작 -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 웹 브라우저의 제목 표시줄에 표시할 내용 -->
+        <title>HTML 기본구조</title>
+        <!-- 외부 스타일 방식 -->
+        <link rel="stylesheet" href="스타일.css">
+        <!-- 내부 스타일 방식 -->
+        <style></style>
+        <!-- 내부 스크립트 -->
+        <script> "자바스크립트의 내용"</script>
+        <!-- 헤드 끝 -->
+    </head>
+
+    <!-- 본문 시작 -->
+     <!-- 인라인 스타일 방식 -->
+    <body>
+        <!-- 웹 브라우저에 표시할 내용을 기록한다. -->
+        <!-- 콘텐츠 제목: h1~h6  -->
+        <h1>제목</h1>
+        <!-- 본문 내용 (문단, 단락) -->
+        <!-- lorem +탭, 의미없는 채우기 텍스트 -->
+        <!-- strong: 강조 강조 텍스트(상), 굵게 -->
+        <!-- em: 중요한 텍스트(중) 이텔릭-->
+        <!-- mark: 강조 텍스트(하) -->
+        <p><span style="font-weight:700; font-size:30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet deserunt laboriosam quaerat quibusdam harum doloremque maxime sint culpa rerum <b>aspernatur</b> nulla voluptatem <span style="font-style:italic">repellendus doloribus</span> odit quas, <i>quae</i> numquam error minus?</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At consequatur dignissimos autem culpa <span style="background: yellow">commodi maiores</span> modi. Impedit quasi incidunt hic illo quis explicabo ea expedita possimus, consequuntur, eaque nostrum ipsum!</p>
+        <!-- lorem(숫자)+탭 , 5자 더미 텍스트-->
+        <p>Lorem ipsum dolor sit amet.</p>
+        <!-- ul의 자식은 li만 사용할 수 있다. -->
+         <ul>
+            <!-- 잘못된 표시 유효성 검사 에러남
+                <h2>제목2</h2>
+                <p>단락2</p>
+            -->    
+            <!-- li 안에는 본문에서 배운 모든 태그 사용 가능 -->
+            <li>
+                <ul>
+                    <li>순서 없는 목록 만들기</li>
+                </ul>
+            </li>
+         </ul>
+        <!-- 하이퍼 링크 -->
+        <a href="URL,파일,이메일,전화번호">내용</a>
+        <!-- 이미지: jpg(투명x,용량이 작다), gif, png(투명 배경 사진), svg(로고, 아이콘) -->
+         <!-- 더미 이미지: https://picsum.photos -->
+        <img src="https://picsum.photos/id/237/300/200" alt="대체텍스트">
+        <!-- 비디오 삽입: mp4, webm, ogv -->
+        <!-- 무료 비디오 사이트 https://www.pexels.com/ko-kr/   -->
+        <video controls style="width:400px; height:400px;" autoplay muted loop>
+            <source src="../assets/vid/pixel.mp4" type="video/mp4">
+            <source src="../assets/vid/pixel.mp4" type="video/webm">
+            <source src="../assets/vid/pixel.mp4" type="video/ogg">
+        </video>
+        <!-- 오디오 삽입: mp3, wav, ogg -->
+        <!-- 무료 효과음 사이트 https://pgtd.tistory.com/ -->
+        <audio controls>
+            <source src="../assets/aud/sori.mp3" type="audio/mpeg">
+            <source src="../assets/aud/sori.wav" type="audio/mpeg">
+            <source src="../assets/aud/sori.ogg" type="audio/mpeg">
+        </audio>
+        
+        <!--외부 파일(*.mp4),URL 가져오기  -->
+        <!-- border: none; -->
+        <iframe src="https://www.daum.net/" style="border: none;"></iframe>   
+
+        <script>"자바스크립트의 내용"</script>
+    </body> 
+  <!-- 본문의 끝 -->
+
+</html>
+<!-- HTML 문서의 끝 -->

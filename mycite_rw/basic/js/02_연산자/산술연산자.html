@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js:산술연산자</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            산술연산자
+                +
+                -
+                *
+                /
+                % (나머지)
+                    예) 5 % 2 -> 1
+                ++
+                --
+                ** (거듭제곱, ES6)    
+                    예) 2*2*2*2*2 -> 32
+                    예) 2**5 -> 32
+
+        */
+
+        //변수 선언 키워드: var, let(재할당⭕), const(재할당❌)
+        // 변수 사용시 const를 사용하고 재할당이 필요하면 let을 쓰자!
+        let num1 = 5;
+        let num2 = 2;
+        let num3 = num4 = 0;
+
+        document.write("5+2 = " + (num1 + num2) + '<br>'); //5+2= 7
+        document.write("5-2 = " + (num1 - num2) + '<br>'); //5-2= 3
+        document.write("5*2 = " + (num1 * num2) + '<br>'); //5*2= 6
+        document.write("5/2 = " + (num1 / num2) + '<br>'); //5/2= 2.5
+        document.write("5%2 = " + (num1 % num2) + '<br>'); //5%2= 1
+        //**는 거듭제곱 연산
+        document.write("5**2 = "+ (num1**num2)+ '<br>')// 5**2 = 25
+
+        // 증감 연산: ++(1씩증가), --(1씩 감소)
+        // 전위 연산: ++피연산자, --피연산자
+        // 후위 연산: 피연산자++, 피연산자--
+        //Uncaught TypeError: Assignment to constant variable.
+        //num1++는 num1에 있는 값을 1증가시켜 다시 재할당!
+        document.write("num1++ = "+ num1++ + '<br>'); // num1++ = 5
+        document.write("++num1 = "+ ++num1 + '<br>'); // ++num1 = 7
+        document.write("num2-- = "+ num2-- +'<br>'); // num2-- = 2
+        document.write("--num2 = "+ --num2 +'<br>');// --num2 = 0
+
+    </script>
+</body>
+
+</html>

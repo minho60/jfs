@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS white-space</title>
+    <style>
+        /* 
+            white-space
+                - 요소내부의 공백을 처리하는 방법을 지정합니다.
+                - normal(기본값)
+                - nowrap: 줄바꿈❌
+                - pre
+                - pre-line
+                - pre-wrap
+        */
+        p{
+            /* width: 200px; */
+            border: 1px solid #000;
+        }
+
+        /* 텍스트가 요소의 가로폭 보다 많을 경우 자동으로 줄 바꿈 */
+        /* 자동 줄바꿈⭕,tab/spacebar❌ enter❌ */
+        p.a {
+            white-space: normal; /* whsn */
+        }
+        /* 자동 줄바꿈❌,tab/spacebar❌ enter❌ */
+        p.b {
+            white-space: nowrap; /* whs */
+        }
+        /* 자동 줄바꿈❌,tab/spacebar⭕ enter⭕ */
+        p.c {
+            white-space: pre; /* whsp */
+        }
+         /* 자동 줄바꿈⭕,tab/spacebar❌ enter⭕ */
+        p.d{
+            white-space: pre-line; /* whspl */
+        }
+         /* 자동 줄바꿈⭕,tab/spacebar⭕ enter⭕ */
+        p.e{
+            white-space: pre-wrap; /* whspw */
+        }
+
+    </style>
+</head>
+
+<body>
+<p class="a">
+This is some text. This is some text. This is some text.
+
+
+    This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+</p>
+<p class="b">
+This is some text.          This is some text. This is some text.
+
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+</p>
+<p class="c">
+This is some text.          This is some text. This is some text.
+
+     This is some text. This is some text. This is some text.
+        This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+</p>
+<p class="d">
+This is some text.          This is some text. This is some text.
+
+    This is some text. This is some text. This is some text.
+        This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+</p>
+<p class="e">
+This is some text.           This is some text. This is some text.
+
+
+This is some text. This is some text. This is some text.
+
+This is some text. This is some text. This is some text.
+
+This is some text. This is some text. This is some text.
+</p>
+
+
+</body>
+
+</html>

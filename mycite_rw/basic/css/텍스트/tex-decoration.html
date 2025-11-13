@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-decoration</title>
+    <style>
+        /* 
+            개별속성(ver.css3)
+                text-decoration-line
+                text-decoration-line
+                text-decoration-line
+                text-decoration-line
+        
+            text-decoration-style
+                - 기본값: solid
+                - solid: 실선
+                - double: 이중실선
+                - dotted:  점선
+                - dashed
+                - wavy
+                - initial
+                - inherit
+
+            text-decoration-thinkness
+                - 기본값: auto
+                - auto
+                - font-from
+
+            text-decoration-color  
+                - currentColor 기본값  
+            
+
+
+
+            속기 속성
+                text-decoration: line(필수) [style] [thinkness] [color];
+        */
+        div{
+            margin: 50px;
+        }
+        div.a {
+            text-decoration-line: overline;
+            text-decoration-style: dashed;
+            text-decoration-thickness: auto;
+            color: red;
+        }
+
+        div.b {
+            /* 개별속성 */
+            text-decoration-line: underline;
+            text-decoration-style: dotted;
+            text-decoration-thickness: 5px;
+            text-decoration-color: blue;
+
+            /* 속기속성 */
+            text-decoration: underline dotted 5px red;
+           
+        }
+
+        div.c {
+            text-decoration-line: line-through;
+            text-decoration-style: solid;
+            text-decoration-thickness: 50%;
+            font-size: 20px;
+        }
+
+        div.d {
+            text-decoration-line: overline underline;
+            text-decoration-style: wavy;
+            line-height: 1;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline wavy;
+        }
+
+    </style>
+</head>
+
+<body>
+   <div class="a">overline</div>
+   <div class="b">underline</div>
+   <div class="c">line-through</div>
+   <div class="d">overline underline</div>
+   <a href="#">a태그의 경우는 기본이 밑줄</a>
+</body>
+
+</html>

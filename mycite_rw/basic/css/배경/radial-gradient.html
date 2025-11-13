@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linear gradients</title>
+    <style>
+        /* 
+            radial- gradients() 함수
+
+            background-image: radial-gradient([모양] [크기 at 위치], 색1, 색2, ...);
+                모양
+                    -ellipse(타원, 기본값), circle(원)
+                    farthest-corner: 코너에서 가장 먼 (기본 값)
+                    closest-corner: 코너에서 가장 가까운
+                    closest-side: 사이드에서 가장 가짜운
+                    farthest-side: 사이드에서 가장 먼
+              
+        */
+        p {
+            width: 500px;
+            height: 200px;
+            margin: 50px;
+        }
+
+        #grad1 {
+            /* top to bottom(위에서 아래): 색1에서 색2 */
+            background-image: radial-gradient(red, yellow, green);
+        }
+
+        #grad2 {
+            background-image: radial-gradient(circle, red 5%, yellow 15%, green 60%);
+        }
+
+        #grad3 {
+            background-image: radial-gradient(closest-side at 70% 60%, red, yellow, black);
+        }
+
+        #grad4 {
+            background-image: radial-gradient(farthest-side at 70% 60%, red, yellow, black);
+        }
+
+        #grad5 {
+            background-image: radial-gradient(closest-corner at 70% 60%, red, yellow, black);
+        }
+
+        #grad6 {
+            background-image: radial-gradient(farthest-corner at 70% 60%, red, yellow, black);
+        }
+        #grad7 {
+            background-image: radial-gradient(farthest-corner at 70% 60%, red, yellow, black);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <p id="grad1"></p>
+    <p id="grad2">background-image: linear-gradient(to top, red, yellow); </p>
+    <p id="grad3">background-image: linear-gradient(to top, red, yellow); </p>
+    <p id="grad4">background-image: linear-gradient(to top, red, yellow); </p>
+    <p id="grad5">background-image: linear-gradient(to top, red, yellow); </p>
+    <p id="grad6">background-image: linear-gradient(to top, red, yellow); </p>
+    <p id="grad7">background-image: linear-gradient(to top, red, yellow); </p>
+
+</body>
+
+</html>

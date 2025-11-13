@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js: 연관배열</title>
+</head>
+
+<body>
+    <script>
+
+        /* 
+            객체(object)?
+                 - 현실세계의 모든 것 (유형, 무형)을 객체로 표현한다
+                 - 유형: 예) 사람 , 동물, 자동차, 선박,...
+                 - 무형: 예) 계좌, 계약, 춤, ... 
+                 - 키(속성)와 값으; 쌍으로 구성한다.
+
+            객체의 유형
+                - 내장 객체:
+                    - 전역객체: Data, Array, String,...
+                    - BOM(Browser Object Model)
+                            : Window
+                                - document(DOM: Document Object Model)
+                                - screen, location, navigator, history, frames, XMLHttpRequest
+                - 사용자 정의 객체     
+
+            예) 자동차를 객체로 모델링
+                - 특성: 회사명(company), 모델명(name), 연비,  색상(color), 도어수(door), 속도(speed) -> 속성 
+                - 동작: 시동걸기(start), 속도 내기(eccel), 멈추기(stop), 변속하기(transe) -> 메서드     
+
+            객체(object) 생성(선언)
+                    const 변수 = {
+                        속성: 속성값,
+                        메서드: function(){},
+                        ...
+                        속성: 값
+                    }
+
+                    const car ={
+                        company: '현대',
+                        name: '소나타',
+                        color: '흰색',
+                        door: 4,
+                        speed: 200,
+                        start: function(){return this.speed+10}
+                        accel: function(){어떻게 동작하나?}
+                        stop: function(){어떻게 동작하나?}
+                    }
+
+                    - this: this 는 car를 가르킨다. 즉 car.speed+10
+
+            객체 참조(조회)
+                변수['키']
+                변수.키
+                car['company']
+                car.name
+                car.speed=200;
+                car.speed = car.speed+10
+                car.start();
+
+
+             객체.속성
+             객체.메서드()   
+                arr.length
+                arr2.forEach()
+
+                const Array ={
+                    forEach(ele, idx, arr)
+                }
+
+        */
+      
+    </script>
+</body>
+
+</html>

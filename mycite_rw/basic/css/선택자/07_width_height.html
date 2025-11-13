@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>width와 height</title>
+    <style>
+        body {
+            /* outline은 박스 모델에 포함되지 않으며, border바깥에 지정된다. */
+            outline: 1px solid lime;
+            /* vw, vmax, vmin */
+            /* vh: viewport height -> 뷰포트 기준 */
+            height: 100vh;
+        }
+
+
+        .box2 {
+            width: 500px;
+            /* w50 */
+            height: 10%;
+        }
+
+        .div1 {
+            width: 100%;
+            /* 최대 너비 */
+            max-width: 1200px; /* maw500 */
+            margin: 0 auto;
+            /* 최소 너비 */
+            min-width: 500px; /* mw500 */
+            /* 최대 높이 */
+            /* max-height: 500px; -> mah500 */
+            /* 최소 높이 */
+            /* min-height:500px; -> mh500 */
+            background-color: rgb(37, 51, 53);
+        }
+
+        /*
+            CSS 우선순위
+            1. 인라인 
+            2. id
+            3. class, 슈도 class
+            4. 타입, 슈도 요소
+            - 같은 선택자이면 아래 기록한 것이 적용
+            - 같은 속성일 떄 아래 기록한 것이 적용
+         */
+
+        .div2 {
+            width: 600px;
+            background-color: rgb(241, 5, 163);
+        }
+
+        div {
+            /* 단위: px은 고정, % 는 부모 기준 */
+            height: 200px;
+            /* h200 */
+            width: 50%;
+            /* w50p */
+            background-color: powderblue;
+            /* bgc -> p */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="div1">박스3</div>
+    <div class="div2">박스4</div>
+
+</body>
+
+</html>

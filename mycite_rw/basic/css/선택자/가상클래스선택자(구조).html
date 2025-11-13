@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css 선택자</title>
+<style>
+    /* 
+    가상 클래스 선택자
+        자식 요소의 타입을 구분하지 않는다.
+        선택자:nth-child(n)
+        선택자:nth-last-child(n)
+        선택자:first-child
+        선택자:last-child
+        선택자:only-child
+
+
+
+        자식요소의 타입을 구분한다.
+        선택자:nth-of-type(n)       1번쨰 요소 부터
+        선택자:last-nth-of-type(n)  마지막 요소 부터
+        선택자:first-of-type        첫 번째 요소
+        선택자:last-of-type         마지막 요소
+        선택자:only-of-type         자식이 하나인 요소 
+
+        n은 숫자, 수열(2n, 2n+1, ...), 
+        홀수 번째: odd 또는 2n+1, 2n-1
+        짝수 번쨰: even 또는 2n
+        3의 배수 번째: 3n
+        4의 배수 번째: 4n 
+
+
+       선택자:empty 요소는 요소를 선택
+
+
+
+    부모 자식 관계 선택자
+        부모선택자 자식선택자 -> 손자포함
+        부모선택자>자식선택자 -> 자식만
+    
+    
+    
+    
+    
+    
+    형제 관계 선택자 
+        형선택자~ 제선택자 -> 모든 동생
+        참고 ~(딜드, tilde)
+
+    인접형제 선택자
+        형선택자+ 제선택자 -> 바로 아래 동생만
+    
+    
+    */
+
+    /* p 요소중 첫 번 째 요소 선택 */
+p:nth-of-type(1){text-decoration: underline;} /* tdu */
+p:first-of-type{text-decoration: underline;} /* tdu */
+p:nth-last-of-type(1){text-decoration: underline;} /* tdu */
+
+
+
+/* p요소중 마지막 요소 선택 */
+p:nth-of-type(6){text-decoration: underline;}
+p:last-of-type{text-decoration: underline;} /* tdu */
+p:nth-last-of-type(1){text-decoration: underline;}
+
+p:nth-last-child(1){font-style: italic;}
+
+
+    /* p요소 중 짝수 번 째 선택 */
+p:nth-of-type(even) {color: red;}
+p:nth-of-type(2n) {color: red;}
+
+p:nth-child(even){background-color: yellow;}
+p:nth-child(2n){background-color: yellow;}
+
+
+p:nth-child(1){font-style: italic;} /* fs */
+p:first-child{font-style: italic;}
+
+    /* p요소중 홀 수 번 째 선택 */
+p:nth-of-type(2n+1) {color: blue;}
+p:nth-of-type(2n-1) {color: blue;}
+p:nth-of-type(odd) {color: blue;}
+
+p:nth-child(2n+1){font-size: 40px;}
+
+/* div에 자식이 하나인 요소 */
+div h2:only-of-type{border-left: 10px solid red;}
+div h2:only-child{border-right:10px solid blue;}
+
+div:EMPTY{ 
+    display: block;
+    width: 200px;
+    height: 100px;
+    border:1px solid red;
+
+}
+
+</style>
+
+</head>
+<body>
+    <div>
+        <h2>형제관계 선택자 </h2>
+         <p>나는 1 번째 문단</p>
+    </div>
+
+<div></div>
+<p></p>
+
+
+    <div>
+        <h1>1)가상 클래스 선택자</h1>
+        <h2>2)~of-type</h2>
+        <p>3)~of-type은 태그 종류(즉,타입)을 구별한다 </p>
+        <p>4)나는 2 번째 문단</p>
+        <h2>5)~child</h2>
+        <p>6)~child는 태그 종류를 구별하지 않는다.</p>
+        <p>7)나는 4 번째 문단</p>
+        <p>8)나는 5 번째 문단</p>
+        <p>9)나는 6 번째 문단</p>
+    </div>
+
+
+</body>
+</html>
