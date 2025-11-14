@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS배열 내 배열</title>
+</head>
+
+<body>
+    <div id="car"></div>
+
+    <script>
+
+        /* 
+            배열안의 값을 배열 값으로 지정
+                const arr = [값, 값,..];
+                const arr = [[값,값,..], [값, 값,... ], [값, 값, ...] ]; 
+        */
+
+        const car = [
+            ['소나타', '파랑', 100],
+            ['지프', '빨강', 70],
+            ['피아트', '흰색', 150],
+            ['그랜져', '검정', 130],
+            ['테슬라', '회색', 120]
+        ];
+        const div = document.querySelector('#car')
+        div.innerHTML = `car[2][1]: ${car[2][1]} `;
+
+        // for문으로 반복 표현
+        // for(i=0; i<car.length; i++){
+        //     div.innerHTML+= `<h2>[car${(i+1)}]</h2>
+        //                      <p>${car[i]} </p>`;
+        // }
+        
+
+        // ForEach로 반복 표현
+        car.forEach((ele,i) => {
+            div.innerHTML+= `<h2>[car${(i+1)}]</h2>
+        
+            <p>${car[i]} </p>`;
+            
+        });
+
+
+    </script>
+</body>
+
+</html>
