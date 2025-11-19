@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 slide</title>
+    <style>
+        #slide,
+        #panel,
+        #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+            padding: 70px;
+            display: none;
+            background-color: #ffff00;
+        }
+    </style>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="jquery-3.7.1.min.js"></script>
+    <!-- 제이쿼리 ui 라이브러리 -->
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+
+        $(() => {
+            // #slide를 클릭하면
+            $('#slide').on('click', ()=>{
+                // #panel이 슬라이드 다운
+                $('#panel').slideDown();
+            });
+            // #panel을 클릭하면
+            $('#panel').on('click', e=>
+                // #panel이 슬라이드 업
+                // 화살표 함수
+                // - 매개변수가 1개이면 () 생략가능
+                // - 실행문이 1개이면 {} 생략가능
+                $(e.currentTarget).slideUp()
+            );
+            // #flip을 클릭하면
+              $('#flip').on('click', ()=>{
+               //#panel을 슬라이드토글
+                $('#panel').slideToggle(1000);
+            });
+            // 버튼을 클릭하면
+              $('button').on('click', ()=>{
+               // 애니메이션을 멈춤
+                $('#panel').stop();
+            });
+
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <button id="stop">Stop sliding</button>
+    <div id="slide">[오늘의 공지사항]</div>
+    <div id="panel">오늘은 jQuery프로그램을 학습 합니다.<br>예제를 작성한 후 실행해 보세요</div>
+    <div id="flip">Toggle slide</div>
+    <p></p>
+</body>
+
+</html>

@@ -5,6 +5,7 @@
 /* 웹 폰트 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 
+/* 타이포 */
 @font-face {
     font-family: Lato-Regular;
     src: url(../assets/font/Lato-Regular.ttf);
@@ -12,6 +13,10 @@
 @font-face {
     font-family: Lato-Thin;
     src: url(https://fsclass-n.github.io/jfs/assets/font/Lato-Thin.ttf);
+}
+
+.ls10px {
+    letter-spacing: 0.625rem;
 }
 
 
@@ -82,4 +87,25 @@
 .myimg{
     width: 425px;
     height: 280px;
+}
+
+/* 진행률 바(progres-bar) */
+.progress{
+    height: 35px;
+}
+.progress:first-of-type .progress-bar{
+    width: 70%;
+}
+.progress:last-of-type .progress-bar{
+    width: 80%;
+}
+
+/* 폼(양식) */
+input{
+    height: 45px;
+}
+
+.textarea{
+    height: 200px;
+    resize: none;
 }
