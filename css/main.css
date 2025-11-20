@@ -10,6 +10,7 @@
     font-family: Lato-Regular;
     src: url(../assets/font/Lato-Regular.ttf);
 }
+
 @font-face {
     font-family: Lato-Thin;
     src: url(https://fsclass-n.github.io/jfs/assets/font/Lato-Thin.ttf);
@@ -22,7 +23,7 @@
 
 
 /* 공통 */
-.container{
+.container {
     max-width: 980px;
 }
 
@@ -35,11 +36,13 @@
     filter: brightness(40%);
     background-image: url(/jfs/assets/img/dark.jpg);
 }
+
 .parallax-bg {
     /* position: relative; */
     height: 400px;
     background: no-repeat 50% 50% / cover fixed;
 }
+
 /* #about .parallax-bg {
     background-image: url(/jfs/assets/img/damian-ochrymowicz-uxnonl5ctUs-unsplash.jpg);
     background-position: 50% 70%;
@@ -48,6 +51,7 @@
 #work .parallax-bg {
     background-image: url(/jfs/assets/img/portfolio.jpg);
 }
+
 #contact .parallax-bg {
     background-image: url(/jfs/assets/img/markus-winkler-GTJNxRG4QJw-unsplash.jpg);
     background-position: 50% 100%;
@@ -56,9 +60,10 @@
 
 
 /* 애니메이션 */
-#home{
+#home {
     overflow: hidden;
 }
+
 .circle_ani {
     position: absolute;
     top: 0;
@@ -73,10 +78,19 @@
     0% {
         transform: rotate(0deg) scale(3);
     }
+
     100% {
         transform: rotate(720deg) scale(3);
     }
 }
+
+/* 헤더박스 그림자 */
+.navbar{
+    box-shadow:0 2px 5px rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+
+
 /* 텍스트 그림자 */
 #home h2 {
     text-shadow: 1px 1px 5px red, 0 0 25px red, 0 0 35px red;
@@ -84,28 +98,45 @@
 
 
 /* 나의 사진 */
-.myimg{
+.myimg {
     width: 425px;
     height: 280px;
 }
 
 /* 진행률 바(progres-bar) */
-.progress{
+.progress {
     height: 35px;
 }
-.progress:first-of-type .progress-bar{
+
+.progress:first-of-type .progress-bar {
     width: 70%;
 }
-.progress:last-of-type .progress-bar{
+
+.progress:last-of-type .progress-bar {
     width: 80%;
 }
 
-/* 폼(양식) */
-input{
+/* 맵 */
+.map {
+    height: 160px;
+}
+
+input {
     height: 45px;
 }
 
-.textarea{
+/* 폼(양식) */
+#name,
+#email {
+    width: calc(50%-8px);
+}
+
+textarea {
+    width: 100%;
     height: 200px;
     resize: none;
+}
+
+#btnForm {
+    width: 28%;
 }
