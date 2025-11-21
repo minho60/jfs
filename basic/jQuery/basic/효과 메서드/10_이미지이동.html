@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 효과메서드</title>
+    <style>
+        .moving {
+            border: 1px solid #000000;
+            margin: 20px auto 0 auto;
+            text-align: right;
+            width: 550px;
+        }
+
+        .moving img {
+            cursor: pointer;
+            position: relative;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+        $(() => {
+            const img = $('img');
+            const imgobj = $('img').width(150); //이미지 카로 크기를 150으로 지정 (set)
+            const boxwidth = $('.moving').width(); // .moving박스 가로 크기 가져오기 (get)
+            const imgwidth = imgobj.width();
+            console.log(boxwidth);
+
+            function move(e, speed) {
+                // 이미지가 왼쪽으로 움직임
+                $(e.currentTarget).animate({ left: -boxwidth + imgwidth }, speed);
+            };
+            //이미지를 클릭하면
+            img.eq(0).on('click', e =>
+                move(e, 1000)
+            );
+            img.eq(1).on('click', e =>
+                move(e, 2000)
+            );
+            img.eq(2).on('click', e =>
+                move(e, 3000)
+            );
+            // 버튼을 클릭하면
+            $('button').on('click', () => {
+                // 이미지가 제자리로(오른쪽) 돌아감
+                $('img').animate({ left: 0 });
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="init">
+        <button type="button">reset</button><br>
+    </div>
+    <div class="moving">
+        <img src="https://i.namu.wiki/i/GnC6cnSB9sgjGHGE6QPpiUNJGAIthxWRGguAU7mE8fYFEUNa8KSp2aA9NzwLkRJFypaQgrIbksmz88FAlrW5nw.webp"
+            alt="이미지1" /><br>
+        <img src="https://i.namu.wiki/i/aoXEvwYjd408MQfYqtiIFQ5GqPB_QHGkF_AeTneTugXsd7veCXrnWCje1caonFsBoni_P0W6g8-CvpkTU-ERyw.webp"
+            alt="이미지2" /><br>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZcBzmNgicS2dJ1vLVjLlg4ZQ6SptsadJQZQ&s"
+            alt="이미지3" /><br>
+    </div>
+</body>
+
+</html>

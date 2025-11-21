@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>win_scrollTop() 메서드</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            position: relative;
+            top: 200px;
+
+            height: 2000px;
+            background: yellow;
+        }
+
+        p {
+            position: absolute;
+            top:200px;
+            left:100px;
+            margin: 0;
+            border: 1px solid orangered;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+
+        /* 
+            이벤트
+                scroll
+    
+    
+            기타메서드
+                scrollTop(): 수직 스크롤 양
+                scrollLeft(): 수평 스크롤 양
+
+                    $(selector).scrollTop(position)
+               
+                offset().top: 요소의 위치(창 기준)
+                position().top: 요소의 위치(부모 기준)
+    
+        
+        */
+
+        $(() => {
+            // p 요소의 창의 최상단에서 부터 위치
+            const ptop = $('p').offset().top;
+            const pleft = $('p').offset().left;
+            console.log(`top:${ptop} left:${pleft}`);
+            
+            // const ptop = $('p').position().top;
+            // const pleft = $('p').position().left;
+            // console.log(`top:${ptop} left:${pleft}`);
+
+            //창이 스크롤되면
+            $(window).scroll(() => {
+                // 창의 스크롤 양
+                let wst = $(window).scrollTop()
+                //소수점을 저림해서
+                let intNumber = Math.floor(wst);
+                //p요소의 내용으로 가져오기
+                $('p').text(intNumber);
+                // 만약 창 스크롤 양이 200 이상이면
+                if (intNumber >= 200) {
+                    // div의 배경색을 바꾼다.
+                    $('div').css({ background: 'violet' })
+                } else { $('div').css({ background: 'green' }) }
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="section">
+        <p>여기에 출력된다.</p>
+    </div>
+  
+
+
+</body>
+
+
+</html>

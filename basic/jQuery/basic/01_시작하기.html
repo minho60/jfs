@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 시작</title>
+    <!-- 제이쿼리 라이브러리 -->
+     <!-- CDN 방식 -->
+     <!-- jquery.com -->
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <!-- 구글 CDN -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+     <!-- 마이크로소프트 CDN -->
+     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.js"></script>
+     <!-- CDNJS 방식 -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <!-- jsDeliver방식  -->
+     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+     
+     <!-- 다운로드 방식 -->
+     <script src="jquery-3.7.1.min.js"></script>
+    <script>
+
+        /* 
+            제이쿼리란?
+                - 자바스크립트 라이브러리
+                - 크로스 브라우징에 효과적!
+        
+            라이브러리
+                개발자가 필요할 때 능동적으로 호출하여 사용하는 코드묶음이며, 즉, 개발자가 제어권을 갖고 라이브러리를 사용합니다.
+                예) 제이워크, 리액트
+
+            프레임워크
+                전체적인 애플리케이션의 틀을 제공하고 개발자가 그 틀안에서 코드를 작성하는 방식입니다. 프레임 워크는 제어의 주도권을 갖고 개밟자의 코드를 호출합니다.
+                예) 부트스트랩, 스프링
+
+            크로스 브라우징이란?
+                다양한 웹 브라우저와 운영체제(윈도우, 맥, ios, 안드로이드, 리눅스,.....)
+                웹사이트가 다양한 브라우저와 환경에서 동일하거나 유사한 화면과 기능을 제공하도록 만드는 작업을 말합니다.
+                Chrome, Safari, Firefox, Edge 등 어떤 브라우저에서 보더라도
+                웹사이트가 깨지지 않고 정상 작동하도록 만드는 것.
+        */
+
+        /* 
+            이벤트 형식
+                객체.addEventListener("이벤트 종류", 콜백함수);
+                객체.addEventListener("DOMContentLoaded", function(){});
+                객체.addEventListener("DOMContentLoaded", ()=>{});
+    
+        */
+        // 이벤트 종류: click, DOMContentLoaded,...
+        // 바닐라 스크립트
+        // DOMContentLoeded: DOM의 내용이 모두 로드 됐을 떄
+        // 이벤트 리스너를 통해 콜백함수가 실행된다.
+        // window.addEventListener("DOMContentLoaded", function () {
+        //     document.querySelector('p').innerHTML = "웹 프로그래밍";
+        // });
+
+
+        // 제이 쿼리
+        // 객체.메서드()
+        // jQuery(document.ready())
+        // 문서가 준비되었을 떄
+        // jQuery(document).ready(()=>{});
+        //$(document).ready(()=>{});
+        $(() => {
+            // 제이쿼리 코드
+            $('p').html('웹 프로그래밍')
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <p></p>
+
+</body>
+
+</html>

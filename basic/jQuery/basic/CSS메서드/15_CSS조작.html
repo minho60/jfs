@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 CSS 조작메서드</title>
+    <style>
+
+        .bold{
+            font-weight: bold;
+        }
+        .important {
+            font-size: xx-large;
+        }
+
+        .blue{
+            color: blue;
+        }
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+
+        /* 
+        $(selector).addClass(classname,function(index,currentclass))
+            요소.addClass('클래스명')-  요소에 하나 이상의 클래스를 추가합니다.
+            요소.removeClass('클래스명')-  요소에서 하나 이상의 클래스를 제거합니다.
+            요소.toggleClass('클래스명')-  요소에 클래스를 추가/제거하는 사이를 전환합니다.
+            요소.hasClass('클래스명')- 요소 중 지정된 클래스가 있는지 확인 있으면 true, 없으면 false
+
+            css()- 스타일 속성을 설정하거나 반환합니다.   
+            get(가져오기, 반환(return))
+            $(selector).css(property)
+            set(지정하기, 설정)
+            $(selector).css(property,value)
+            $(selector).css(property,function(index,currentvalue))
+            $(selector).css({property:value, property:value, ...})         
+        */
+        $(() => {
+            $("#div1").addClass("important bold");
+            $("#div2").addClass( "blue");
+
+            const result = $('p').hasClass('intro');
+            console.log(result)
+            // set
+            $('#div1').css({width:300, height:100,  background:'yellow'});
+            // get
+            const bg = $('#div1').css('background');
+            const w = $('#div1').css('width')
+            const h = $('#div1').css('height')
+            // set
+            $('p').css({width:w, height:h , background:bg});
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="div1">This is some text.</div>
+    <div id="div2">This is some text.</div>
+    <p class="intro">나는 문장이다.</p>
+</body>
+
+</html>

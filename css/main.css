@@ -8,7 +8,7 @@
 /* 타이포 */
 @font-face {
     font-family: Lato-Regular;
-    src: url(../assets/font/Lato-Regular.ttf);
+    src: url(/assets/font/Lato-Regular.ttf);
 }
 
 @font-face {
@@ -29,12 +29,12 @@
 
 /* 배경 이미지*/
 #home .bgimg {
-    background: url(/jfs/assets/img/light.jpg) no-repeat 50% 50% / cover fixed;
+    background: url(/assets/img/light.jpg) no-repeat 50% 50% / cover fixed;
 }
 
 #home.dark .bgimg {
     filter: brightness(40%);
-    background-image: url(/jfs/assets/img/dark.jpg);
+    background-image: url(/assets/img/dark.jpg);
 }
 
 .parallax-bg {
@@ -49,11 +49,11 @@
 } */
 
 #work .parallax-bg {
-    background-image: url(/jfs/assets/img/portfolio.jpg);
+    background-image: url(/assets/img/portfolio.jpg);
 }
 
 #contact .parallax-bg {
-    background-image: url(/jfs/assets/img/markus-winkler-GTJNxRG4QJw-unsplash.jpg);
+    background-image: url(/assets/img/markus-winkler-GTJNxRG4QJw-unsplash.jpg);
     background-position: 50% 100%;
 }
 
@@ -84,16 +84,48 @@
     }
 }
 
-/* 헤더박스 그림자 */
-.navbar{
-    box-shadow:0 2px 5px rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+/* 헤더 배경색 지정 */
+#header{
+    background: transparent;
+    transition: background 0.3s;
 }
 
+#header a{
+    color:#fff;
+}
+
+#header a:hover{
+    color:#222;
+}
+
+#header.active{
+    background: #fff;
+    /* 헤더박스 그림자 */
+    box-shadow:0 2px 5px rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+#header.active a{
+    color:#222;
+}
+#header.active a:hover{
+    color:#111;
+}
 
 
 /* 텍스트 그림자 */
 #home h2 {
     text-shadow: 1px 1px 5px red, 0 0 25px red, 0 0 35px red;
+}
+
+#counter{
+    /* 카운터와 #work 섹션 사이가 벌어진 부분 메꾸기! */
+    transform: translateY(56px);
+}
+
+#about::before, #work::before, #contact::before{
+    display: block;
+    content:'';
+    /* ::before높이를 헤더의 높이 만큼 지정한다. */
+    height: 56px;
 }
 
 
