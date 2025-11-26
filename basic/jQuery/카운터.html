@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운터</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+</head>
+
+<body>
+    <!-- 사용자 정의 속성: data-*  -->
+    <span class="count" data-target="3">0</span>
+    <span class="count" data-target="2">0</span>
+    <span class="count" data-target="20">0</span>
+    <span class="count" data-target="3">0</span>
+
+    <script>
+        // 자동 카운터
+        // .count 각각 함수를 실행 
+        $(".count").each(function () {
+
+            // 변수
+            // parseInt(값)-> 값을 정수로 변환
+            // parseInt(3.2)-> 3
+            // parseInt(3.6)-> 3
+            // $(this)는 function(){}에서 함수를 수행하고 있는 .count를 가르킨다.
+            // attr('속성')는 속성 값을 가져온다.
+            let target = parseInt($(this).attr("data-target"));
+            let current = 0;
+            let duration = 1000;
+            let interval = 20;
+            // Math.ceil(숫자): 올림
+            // Math.floor(숫자): 버림
+            // Math.round(숫자): 반올림
+            // let step = Math.ceil(target / (duration / interval));
+
+            // 카운터 종료
+            let timer = setInterval(() => {
+                current++;
+
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+
+                $(this).text(current);
+            }, interval);
+        });
+
+    </script>
+
+</body>
+
+</html>

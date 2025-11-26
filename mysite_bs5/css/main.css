@@ -8,7 +8,7 @@
 /* 타이포 */
 @font-face {
     font-family: Lato-Regular;
-    src: url(/assets/font/Lato-Regular.ttf);
+    src: url(../assets/font/Lato-Regular.ttf);
 }
 
 @font-face {
@@ -29,12 +29,12 @@
 
 /* 배경 이미지*/
 #home .bgimg {
-    background: url(/assets/img/light.jpg) no-repeat 50% 50% / cover fixed;
+    background: url(../assets/img/light.jpg) no-repeat 50% 50% / cover fixed;
 }
 
 #home.dark .bgimg {
     filter: brightness(40%);
-    background-image: url(/assets/img/dark.jpg);
+    background-image: url(../assets/img/dark.jpg);
 }
 
 .parallax-bg {
@@ -49,11 +49,11 @@
 } */
 
 #work .parallax-bg {
-    background-image: url(/assets/img/portfolio.jpg);
+    background-image: url(../assets/img/portfolio.jpg);
 }
 
 #contact .parallax-bg {
-    background-image: url(/assets/img/markus-winkler-GTJNxRG4QJw-unsplash.jpg);
+    background-image: url(../assets/img/markus-winkler-GTJNxRG4QJw-unsplash.jpg);
     background-position: 50% 100%;
 }
 
