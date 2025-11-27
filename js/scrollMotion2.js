@@ -23,19 +23,15 @@ $(window).scroll(function () {
                 speed = 2000;
                 break;
             case 1:
+            case 2:
                 offset1 = 800;
                 offset2 = 600;
                 speed = 1000;
                 break;
-            case 2:
-                offset1 = 800;
-                offset2 = 300;
-                speed = 2000;
-                break;
             default:
-                offset1 = 800;
-                offset2 = 400;
-                speed = 1500;
+                offset1 = 1800;
+                offset2 = 600;
+                speed = 400;
         }
 
         if (windowScrollTop > elementTop - windowHeight + offset1) {
@@ -48,7 +44,7 @@ $(window).scroll(function () {
                 );
         } else {
             //거짓일 경우
-            $(".motion")
+            $(el)
                 .stop()
                 .animate({ top: pos + offset2, opacity: 0 }, speed, easing);
         }
