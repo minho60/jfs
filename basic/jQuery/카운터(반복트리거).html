@@ -48,9 +48,18 @@
 
     <section>
         <div id="counters">
-            <div class="counter" data-target="100">0</div>
-            <div class="counter" data-target="200">0</div>
-            <div class="counter" data-target="300">0</div>
+            <div>
+                <div class="counter" data-target="3">0</div>+<span>내용</span>
+            </div>
+            <div>
+                <div class="counter" data-target="3">0</div>+<span>내용</span>
+            </div>
+            <div>
+                <div class="counter" data-target="15">0</div>+<span>내용</span>
+            </div>
+            <div>
+                <div class="counter" data-target="2">0</div>+<span>내용</span>
+            </div>
         </div>
     </section>
 
@@ -76,13 +85,13 @@
 
             function checkScroll() {
                 const scrollTop = $(window).scrollTop(),
-                    windowHeight = $(window).height();
+                    windowHeight = $(window).height(),
+                    elementTop = $(".counter").offset().top;
 
                 $(".counter").each(function () {
-                    const $this = $(this),
-                        elementTop = $this.offset().top;
+                    const $this = $(this)
 
-                    if (scrollTop + windowHeight > elementTop + 50 && scrollTop < elementTop + $this.outerHeight()) {
+                    if (scrollTop + windowHeight > elementTop + 20) {
                         if (!$this.hasClass("active")) {
                             $this.addClass("active");
                             runCounter($this);
