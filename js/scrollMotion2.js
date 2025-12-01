@@ -33,7 +33,14 @@ $(window).scroll(function () {
         if (windowScrollTop > elementTop - windowHeight + offset1) {
             $(el).stop().animate({ top: pos, opacity: 1 },(speed * (i + 1)) / 2, easing);
         } else {
+
             $(el).stop().animate({ top: pos + offset2, opacity: 0 }, speed, easing);
+
+            //거짓일 경우
+            $(el)
+                .stop()
+                .animate({ top: pos + offset2, opacity: 0 }, speed, easing);
+
         }
     });
 
