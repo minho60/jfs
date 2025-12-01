@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 카드 UI 디자인 (순수 CSS)</title>
+    <style>
+        /* 기본 설정 */
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* 카드 컨테이너 (포스터) */
+        .movie-card-poster {
+            /* Placeholder Image - 주토피아 포스터 느낌 */
+            background-image: url('https://placehold.co/400x600/302040/ffffff?text=ZOOTOPIA+2+POSTER');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            width: 100%;
+            max-width: 350px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 텍스트 가독성을 위한 어두운 그라데이션 오버레이 */
+        .poster-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0) 60%);
+        }
+
+        /* 텍스트 그림자 스타일 (가독성 향상) */
+        .text-with-shadow {
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+            color: white;
+        }
+        
+        /* 카드 상단 요소 (랭킹) */
+        .card-top {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 4rem; /* 64px */
+            font-weight: 900; /* extabold */
+            opacity: 0.9;
+        }
+
+        /* 카드 하단 정보 영역 */
+        .card-info-bottom {
+            position: absolute;
+            bottom: 120px; /* 버튼 영역 높이 고려 */
+            left: 20px;
+            right: 20px;
+        }
+        
+        /* 배지 스타일 */
+        .badge {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.65rem; /* 10.4px */
+            font-weight: 900;
+            letter-spacing: 0.05em; /* tracking-widest */
+            display: inline-block;
+        }
+        
+        /* 배지 컨테이너 */
+        .badge-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px; /* space-y-2 */
+        }
+        
+        /* 상태 텍스트 (절찬 상영중) */
+        .status-text {
+            position: absolute;
+            bottom: 0;
+            right: 50px;
+            color: white;
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 600;
+            transform: translateY(calc(100% + 15px)); /* 버튼 영역 바로 위 중앙 */
+        }
+
+        /* ALL 배지 (우측 하단) */
+        .badge-all {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #15803d; /* green-700 */
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+        .badge-all span {
+            font-weight: 900;
+            color: white;
+            font-size: 1.125rem; /* text-lg */
+        }
+
+        /* 하단 액션 버튼 영역 */
+        .action-buttons {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 12px;
+            display: flex;
+            gap: 8px; /* space-x-2 */
+        }
+
+        /* 공통 버튼 스타일 */
+        .btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 0;
+            border-radius: 0.75rem; /* rounded-xl */
+            font-weight: 700;
+            font-size: 1.125rem; /* text-lg */
+            color: white;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        /* 좋아요 버튼 스타일 */
+        .btn-like {
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .btn-like:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .btn-like-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            fill: currentColor;
+        }
+
+        /* 예매 버튼 스타일 (청록색) */
+        .btn-teal {
+            background-color: #0089A0;
+        }
+        .btn-teal:hover {
+            background-color: #006D7C;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="movie-card-poster">
+        <!-- 오버레이 -->
+        <div class="poster-overlay"></div>
+
+        <!-- 카드 상단 (랭킹) -->
+        <div class="text-with-shadow card-top">
+            1
+        </div>
+
+        <!-- 카드 하단 정보 및 배지 -->
+        <div class="text-with-shadow card-info-bottom">
+            <!-- 배지 컨테이너 (좌측 하단) -->
+            <div class="badge-container">
+                <span class="badge">MEGA MX4D</span>
+                <span class="badge">Dolby Atmos</span>
+            </div>
+            
+            <!-- 상태 텍스트 (하단 중앙) -->
+            <p class="status-text">절찬 상영중</p>
+
+            <!-- ALL 배지 (우측 하단) -->
+            <div class="badge-all">
+                <span>ALL</span>
+            </div>
+        </div>
+
+        <!-- 하단 액션 버튼 영역 -->
+        <div class="action-buttons">
+            <!-- 좋아요 버튼 -->
+            <button class="btn btn-like">
+                <!-- 하트 아이콘 (SVG) -->
+                <svg class="btn-like-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <span>1.7k</span>
+            </button>
+
+            <!-- 예매 버튼 -->
+            <button class="btn btn-teal">
+                <span>예매</span>
+            </button>
+        </div>
+
+    </div>
+
+</body>
+</html>
