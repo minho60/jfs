@@ -9,7 +9,7 @@
             const hour = now.getHours();
 
            
-            if (hour >= 18 || hour < 7) {
+            if (hour >= 17 || hour < 7) {
                 home.classList.add('dark');
                 
             } else {
