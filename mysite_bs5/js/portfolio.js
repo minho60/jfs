@@ -20,8 +20,8 @@ $(document).ready(function () {
                     </div><!-- //.back -->
                 </div>
                 <div class="btn">
-                    <span  class="worktype p-0">${data.task}</span>
-                    <a href="${data.siteurl}" class="btn btn-info text-white sitelink">사이트 바로가기</a>
+                    <span class="worktype p-0">${data.task}</span>
+                    <a href="${data.siteurl}" class="btn btn-info text-white m-0 d-block text-center sitelink">사이트 바로가기</a>
                 </div>
             </div>`;
         $(".portfolio").append(card);
