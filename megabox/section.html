@@ -6,8 +6,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카드 데이터 분리</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        /* section */
+        #section {
+            color: #fff;
+        }
+
+        .inbox {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            display: inline-block;
+            border-bottom: 1px solid #555;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .more {
+            color: #ccc;
+            text-align: right;
+            margin-bottom: 16px;
+        }
+
+        .more a {
+            color: #ccc;
+        }
+
+        .more i {
+            margin-left: 8px;
+            font-weight: 400;
+            transform: scale(2.3, 2.3);
+        }
+
+        .link {
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            margin: 50px 0;
+            padding: 25px 0;
+        }
+
+        .link li {
+            width: 275px;
+            text-align: center;
+        }
+
+        .link li:not(:last-of-type)::after {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 30px;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .link li::after {
+            margin-left: 50px;
+        }
+
+        .link .search {
+            position: relative;
+            display: inline-block;
+            width: 70%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 8px;
+            text-align: left;
+        }
+
+        .link .search::before {
+            content: '';
+            position: absolute;
+            right: 0px;
+            top: 4px;
+            width: 18px;
+            height: 18px;
+            background: url(img/ico-search-white.png);
+        }
+
+        .link .search input::placeholder {
+            font-size: 0.938rem;
+            color: #ccc;
+
+        }
+
+        .link img {
+            width: 25px;
+            height: 25px;
+            object-fit: contain;
+            margin-right: 8px;
+        }
+
+        .link span {
+            vertical-align: middle;
+        }
+
+        .mouse {
+            text-align: center;
+        }
+
+        .mouse span {
+            display: inline-block;
+            width: 16px;
+            animation: mouse 2s infinite ease-in-out;
+        }
+
+        @keyframes mouse {
+            0% {transform: translateY(0);}
+            40% {transform: translateY(20px);}
+            80% {transform: translateY(20px);}
+            100% {transform: translateY(0);}
+        }
+
+
+
+        /* boxofficecard */
         .box_office {
             display: flex;
             gap: 40px;
@@ -142,16 +259,28 @@
 </head>
 
 <body>
-    <h2>박스오피스</h2>
-    <div><a href="">더 많은 영화 보기<i class="fa-solid fa-plus"></i></a></div>
-    <!-- Card Ui(카드 UI) -->
-    <div class="box_office"></div><!-- //.box_office -->
-    <div><input type="text" placeholder="영화명을 입력해 주세요"></div>
-    <ul>
-        <li><img src="img/ico-schedule-main.png" alt="상영시간표">상영시간표</li>
-        <li><img src="img/ico-boxoffice-main.png" alt="박스오피스">박스오피스</li>
-        <li><img src="img/ico-quick-reserve-main.png" alt="빠른예매">빠른예매</li>
-    </ul>
+    <section id="section">
+        <div class="inbox">
+            <div>
+                <h2>박스오피스</h2>
+            </div>
+            <div class="more"><a href="">더 많은 영화 보기<i class="fa-solid fa-plus"></i></a></div>
+            <!-- Card Ui(카드 UI) -->
+            <div class="box_office"></div><!-- //.box_office -->
+            <ul class="link">
+                <li><span class="search"><input type="text" placeholder="영화명을 입력해 주세요"></span></li>
+                <li><a href="https://www.megabox.co.kr/booking/timetable"><img src="img/ico-schedule-main.png"
+                            alt="상영시간표"><span>상영시간표</span></a></li>
+                <li><a href="https://www.megabox.co.kr/movie"><img src="img/ico-boxoffice-main.png"
+                            alt="박스오피스"><span>박스오피스</span></a>
+                </li>
+                <li><a href="https://www.megabox.co.kr/booking"><img src="img/ico-quick-reserve-main.png"
+                            alt="빠른예매"><span>빠른예매</span></a></li>
+            </ul>
+            <!-- 마우스 모양 애니메이션 -->
+            <div class="mouse"><span><img src="img/ico-mouse.png" alt="마우스"></span></div>
+        </div> <!-- //.inner -->
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/data.js"></script>
@@ -162,12 +291,12 @@
         // datas.forEach(([요소],[인덱스],[배열])=>{});
         // data.each([인덱스],[요소])=>{};
         // data.map()=>{} 
-        
+
         datas.forEach((data, idx) => {
-            
+
             const screenImgs = data.screenTypes.map(ele =>
-                                 `<img src="${ele}" alt="screenTypes">`).join('');
-                            
+                `<img src="${ele}" alt="screenTypes">`).join('');
+
             const card = `<div class="box_office_card">
                 <div class="inner">
                     <div class="front">
