@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid align</title>
+    <style>
+        /* 
+            그리드 아이템
+            grid-column-start
+                - 그리드 항목이 시작될 열 행을 지정합니다.
+            grid-column-end
+                - 그리드 항목이 끝나는 열 줄을 지정합니다.
+            grid-columngrid-column-start
+                - 및 에 대한 약어 속성grid-column-end
+            grid-row-start
+                - 그리드 항목이 시작될 행 줄을 지정합니다.
+            grid-row-end
+                - 그리드 항목이 끝나는 행 줄을 지정합니다.
+            grid-rowgrid-row-start
+                - 및 에 대한 약어 속성grid-row-end
+
+                
+            
+        
+        */
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 5px;
+            background-color: dodgerblue;
+            padding: 5px;
+
+        }
+
+        /* 그리드 아이템(item) */
+        .container div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .item1{
+            /* 1번 부터 3까지 */
+            grid-column-start: 1;
+            grid-column-end: 3;
+            
+            /* 열번호 1부터 2칸 */
+            grid-column: 1 / span 2;
+
+            /* 행 번호1부터 3까지 */
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-row: 1 /span2 ;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Grid Layout</h1>
+
+    <p>A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or
+        <em>inline-grid</em>.
+    </p>
+
+    <p>Direct child element(s) of the grid container automatically becomes grid items.</p>
+
+    <div class="container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+    </div>
+</body>
+
+</html>

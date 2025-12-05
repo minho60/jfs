@@ -1,0 +1,160 @@
+@charset "utf-8";
+@import url(common.css);
+
+/* 헤더 */
+#header .sub {
+    background: #339EB2;
+}
+
+
+#section {
+    background: #fff;
+    color: #fff;
+    padding-bottom: 150px;
+}
+
+#section .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+#section h2 {
+    color: #222;
+    padding: 50px 0;
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+#section img {
+    height: 32px;
+    object-fit: contain;
+}
+
+.special {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.special:nth-of-type(2) {
+    margin: 100px 0;
+}
+
+.special div,
+.special h3 {
+    height: 260px;
+    background: yellow;
+    border-radius: 12px;
+}
+
+/* 특별관 제목 배경색 */
+.special:nth-of-type(1) h3 {
+    background: #000000;
+}
+
+.special:nth-of-type(2) h3 {
+    background: #8E6916;
+}
+
+.special:nth-of-type(3) h3 {
+    background: #390081;
+}
+
+/* 그리드 아이템 크기 */
+.technology div:nth-of-type(1) {
+    grid-column: 2/span2;
+    grid-row-start: 1;
+    background: url(/img/specialtheater/bg_dolbycinema.png);
+}
+
+.technology div:nth-of-type(2) {
+    grid-column: 2/ span1;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background: url(/img/specialtheater/bg_dolbyvision.png);
+
+}
+
+.technology div:nth-of-type(3) {
+    grid-column: 3/span1;
+    background: url(/img/specialtheater/bg_MX4D.png);
+}
+
+.technology div:nth-of-type(4) {
+    grid-column: 1/ span1;
+    background: url(/img/specialtheater/bg_LED.png);
+}
+
+.technology div:nth-of-type(5) {
+    grid-column: 1/ span1;
+    background: url(/img/specialtheater/bg_dolby_atmos.png);
+}
+
+.luxury div:nth-of-type(1) {
+    grid-column: 2/ span2;
+    background: url(/img/specialtheater/bg_boutique_private.png);
+}
+
+.luxury div:nth-of-type(2) {
+    grid-column: 2/ span1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background: url(/img/specialtheater/bg_suite.png);
+}
+
+.luxury div:nth-of-type(3) {
+    background: url(/img/specialtheater/bg_boutique.png);
+}
+
+.comport div:nth-of-type(1) {
+    background: url(/img/specialtheater/bg_recliner.png);
+}
+
+.comport div:nth-of-type(2) {
+    background: url(/img/specialtheater/bg_comfort.png);
+}
+
+
+/* 그리드 아이템 배경 */
+.technology div:nth-of-type(1) {
+    background: url(/img/specialtheater/bg_dolbycinema.png);
+}
+
+.technology div:nth-of-type(2) {
+    background: url(/img/specialtheater/bg_dolbyvision.png);
+}
+
+.technology div:nth-of-type(3) {
+    background: url(/img/specialtheater/bg_MX4D.png);
+}
+
+.technology div:nth-of-type(4) {
+    background: url(/img/specialtheater/bg_LED.png);
+}
+
+.technology div:nth-of-type(5) {
+    background: url(/img/specialtheater/bg_dolby_atmos.png);
+}
+
+.luxury div:nth-of-type(1) {
+    background: url(/img/specialtheater/bg_boutique_private.png);
+}
+
+.luxury div:nth-of-type(2) {
+    background: url(/img/specialtheater/bg_suite.png);
+}
+
+.luxury div:nth-of-type(3) {
+    background: url(/img/specialtheater/bg_boutique.png);
+}
+
+.comport div:nth-of-type(1) {
+    background: url(/img/specialtheater/bg_recliner.png);
+}
+
+.comport div:nth-of-type(2) {
+    background: url(/img/specialtheater/bg_comfort.png);
+}

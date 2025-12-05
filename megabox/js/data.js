@@ -2,14 +2,14 @@
 const datas = [
     {
         rank: 1,
-        poster: "img/YiSbqEf6OvFcDoLoQCipDojOHqMCwKG4_420.jpg",
+        poster: "/img//YiSbqEf6OvFcDoLoQCipDojOHqMCwKG4_420.jpg",
         title:'주토피아',
         screenTypes: [
-            "img/type_mega_mx4d.png",
-            "img/type_dolbycinema.png",
-            "img/type_dolbyatmos.png",
+            "/img//type_mega_mx4d.png",
+            "/img//type_dolbycinema.png",
+            "/img//type_dolbyatmos.png",
         ],
-        grade: "img/ALL_56x56.png",
+        grade: "/img//ALL_56x56.png",
         age:'All',
         like: 3600,
         description:
@@ -18,12 +18,12 @@ const datas = [
     },
     {
         rank: 2,
-        poster: "img/zRSHfdUWIaRvX73R2mpB6a5WHEyqilwA_420.jpg",
+        poster: "/img//zRSHfdUWIaRvX73R2mpB6a5WHEyqilwA_420.jpg",
         title:'주술회전',
         screenTypes: [
-            "img/type_mega_mx4d.png"
+            "/img//type_mega_mx4d.png"
         ],
-        grade: "img/15_56x56.png",
+        grade: "/img//15_56x56.png",
         age:'15',
         like: 1300,
         description:
@@ -32,12 +32,12 @@ const datas = [
     },
     {
         rank: 3,
-        poster: "img/QbA0Xu2pYIIskq4gziFxbiq6eL9N2i0w_420.jpg",
+        poster: "/img//QbA0Xu2pYIIskq4gziFxbiq6eL9N2i0w_420.jpg",
         title:'정보원',
         screenTypes: [   
 
         ],
-        grade: "img/ALL_56x56.png",
+        grade: "/img//ALL_56x56.png",
         age:'15',
         like: 142,
         description:
@@ -46,12 +46,12 @@ const datas = [
     },
     {
         rank: 4,
-        poster: "img/nsOm6ZHz6sFsfDNiZXluV3aEw4ymvmHm_420.jpg",
+        poster: "/img//nsOm6ZHz6sFsfDNiZXluV3aEw4ymvmHm_420.jpg",
         title:'윗집사람들',
         screenTypes: [
         
         ],
-        grade: "img/19_112x112.png",
+        grade: "/img//19_112x112.png",
         age:'19',
         like: 238,
         description:

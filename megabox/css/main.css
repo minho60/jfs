@@ -1,127 +1,7 @@
  @charset "utf-8";
  @import url(reset.css);
+ @import url(common.css);
 
- /* 헤더 */
- #header {
-     background: #111;
-     position: relative;
-     padding: 15px;
-     border-bottom: 1px solid rgb(255, 255, 255, 0.5);
- }
-
- #header .inner {
-     max-width: 1100px;
-     margin: 0 auto;
- }
-
- /* 로고 */
-
- #logo {
-     position: absolute;
-     left: 50%;
-     top: 50%;
-     transform: translate(-50%, -50%);
- }
-
- /* top menu */
- #header .top_link {
-     display: grid;
-     grid-template-columns: repeat(2,1fr);
-     /* justify-content: space-between; */
- }
-
- #header .top_link a {
-     margin: 0 10px;
-     font-size: 0.8125rem;
-     color: #aaa;
- }
-
- /* link icon */
- #header .link_icon {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
- }
-
- #header .link_icon a {
-     margin: 0 10px;
- }
-
- #header .link_icon img {
-     all: unset;
-     vertical-align: middle;
-     object-fit: cover;
- }
-
-
- /* GNB(글로벌 내비게이션 바) */
- #gnb {
-     position: absolute;
-     width: 100%;
-     max-width: 900px;
-     left: 50%;
-     top: 50px;
-     transform: translateX(-50%);
- }
-
- /* 1depth */
- #gnb .main {
-     display: flex;
-     justify-content: space-evenly;
- }
-
- #gnb .main a {
-     position: relative;
-     font-size: 1.125rem;
- }
-
- #gnb .main>li:nth-of-type(1) {
-     margin-left: 30px;
- }
-
- #gnb .main>li:nth-of-type(4) {
-     margin-left: 300px;
- }
-
- #gnb .main>li:hover .sub {
-     display: flex;
- }
-
- /* 메인 메뉴 호버시 하단 바 */
- #gnb .main>li:not(:nth-of-type(5))>a:hover::after {
-     position: absolute;
-     bottom: -25px;
-     top: 35px;
-     transform: translateX(-100%);
-     content: '';
-     height: 3px;
-     width: 100%;
-     background: #fff;
- }
-
-
- /* 2depth */
- #gnb .sub {
-     /* display: flex; */
-     position: absolute;
-     padding-top: 30px;
-     transform: translateX(-25%);
-     display: none;
-     /* 마지막 메뉴(혜택 메뉴)의 영역이 부족하여 줄 바굼 되는 현상 방지 */
-     text-wrap: nowrap;
- }
-
- #gnb .sub li {
-     margin: 0 8px;
- }
-
- #gnb .sub a {
-     font-size: 0.9375rem;
- }
-
- #gnb .sub a:hover {
-     text-decoration: underline;
- }
 
  /* section 섹션 */
 
@@ -249,8 +129,6 @@
      }
  }
 
-
-
  /* boxofficecard */
  .box_office {
      display: grid; /* dg */
@@ -309,8 +187,10 @@
 
  /* 좋아요 버튼 */
  .btn {
-     display: flex;
+     display: grid;
+     grid-template-columns:80px auto;
      gap: 8px;
+     margin-top: 8px;
  }
 
  .like {
@@ -319,7 +199,6 @@
      border: 1px solid #fff;
      border-radius: 5px;
      height: 34px;
-     width: 100px;
      margin-top: 8px;
      padding: 0 5px;
  }
@@ -384,104 +263,3 @@
      transform: rotateY(360deg);
  }
 
-
- /* footer 푸터 */
- #footer {
-     background: #F8F8FA;
-     font-size: 0.813rem;
-     padding-bottom: 50px;
- }
-
- #footer a {
-     color: #555;
- }
-
- .inbox {
-     width: 1100px;
-     margin: 0 auto;
- }
-
- /* 상단 영역 */
- .footer_top {
-     display: flex;
-     justify-content: space-between;
-     padding: 30px 0;
- }
-
- .fnb {
-     display: flex;
-     gap: 8px;
- }
-
- .fnb a:hover {
-     text-decoration: underline;
- }
-
- .btn_looking_theater {
-     border: 1px solid #ccc;
-     border-radius: 30px;
-     padding: 4px 16px;
- }
-
- .btn_looking_theater img {
-     width: 15px;
-     height: 15px;
-     margin-right: 4px;
- }
-
- /* 하단 영역 */
- .footer_bottom {
-     display: flex;
-     justify-content: space-between;
- }
-
- .info {
-     line-height: 0.5;
- }
-
- .ci {
-     width: 150px;
-     height: 50px;
- }
-
- .sns a {
-     display: inline-block;
-     width: 30px;
-     height: 30px;
- }
-
- .sns a:not(:last-of-type) {
-     margin-right: 4px;
- }
-
- /* 극장 찾기 */
- .theater {
-     position: absolute;
-     left: 0;
-     top: 250px;
-     width: 100%;
-     padding: 30px;
-     color: #fff;
-     height: calc(100vh - 200px);
-     display: none;
- }
-
- .theater.active {
-     display: block;
- }
-
- .tit {
-     display: flex;
-     justify-content: space-between;
- }
-
- .theater h2 {
-     font-weight: normal;
- }
-
- .closed {
-     display: inline-block;
-     width: 36px;
-     height: 36px;
-     cursor: pointer;
- }

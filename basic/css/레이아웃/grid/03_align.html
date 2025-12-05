@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid align</title>
+    <style>
+        /* 그리드 컨테이너
+            display: grid;
+            grid-template
+            grid-template-columns
+                - 그리드의 열 개수와 너비를 정의합니다.
+            grid-template-rows
+                -  그리드의 행 개수와 높이를 정의합니다.
+            grid-template-areas
+
+            justify-content
+                - 가로 수평축 정렬
+                - 기본값: normal(start, stretch)
+                - grid-template-colimns: auto 일때 -> stertch 
+                - 아니면 start
+                    space-evenly: 아이템을 제외한 남은 공간은 모두 같게
+                    space-around: 아이템의 주위공간을 같게
+                    space-between: 첫번 째 아이템은 start, 마지막 아이템은 end 배치 후 나머지 아이템의 주위공간을 같게
+                    center
+                        - 모든 아이템을 가운데
+                    start
+                        - 모든 아이템을 시작 위치
+                    end
+                        - 모든 아이템을 끝 위치
+                    stretch
+                        - grid-template-colimns: auto 일때
+
+            align-content
+                - 세로 수직축 정렬
+                - 기본값: normal
+                    space-evenly
+                    space-around
+                    space-between
+                    center
+                    start
+                    end
+                    stretch
+
+
+            place-content: align-content justify-content
+            place-content: 수직 수평;
+                - 값을 하나만 쓰연 수직/ 수평 둘다 지정
+          
+
+            justif-items
+                - 각 셀 내부의 가로(수평)정렬
+                - justify-content 를 지정하지 않았을 때(normal) 지정된다.
+                - 기본값:stretch
+                - start, end, center
+
+            align-items
+                - 각 셀 내부의 세로(수직)정렬
+                - align-content를 지정하지 않았을 때(normal)지정된다.
+                - 기본 값: stretch
+                - start, end, center, baseline
+
+
+
+            gap, column-gap,row-gap
+            grid-auto-columns
+            grid-auto-rows
+            grid-auto
+            
+        
+        */
+        .container {
+            display: grid;
+            /* grid-template-columns: 70px 70px 70px; */
+            grid-template-columns: repeat(3, 70px);
+            gap: 5px;
+            background-color: dodgerblue;
+            padding: 5px;
+
+            /* 수평 정렬 */
+            justify-content: start;
+            justify-content: center;
+            justify-content: end;
+
+            /* align-content:수직배치 */
+            height: 500px;
+            align-content: stretch; /* acse */
+            align-content: start; /* acs */
+            align-content: center; /* acc */
+            align-content: end; /* ace */
+            align-content: space-between; /* acsb */
+            align-content: space-around; /* acsao */
+            align-content: space-evenly; /* acsev */
+
+            place-content: center;
+            /* 수직은 end, 수평은 space-between */
+            place-content: end space-between;
+            place-content: normal;
+
+            /* 각 셀 내부의 세로(수직)정렬 */
+            align-items:start; /* ai */
+            align-items: end;  /* aie */
+            align-items: center;   /* aic */
+            align-items: baseline; /* aib */
+            align-items: stretch; /* aise */
+    
+            /* 각 셀 내부의 가로(수평) 정렬 */
+            justify-items: start;
+            justify-items: center;
+            justify-items: end;
+            justify-items: stretch;
+
+
+        }
+
+        /* 그리드 아이템(item) */
+        .container div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Grid Layout</h1>
+
+    <p>A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or
+        <em>inline-grid</em>.
+    </p>
+
+    <p>Direct child element(s) of the grid container automatically becomes grid items.</p>
+
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+
+</html>
